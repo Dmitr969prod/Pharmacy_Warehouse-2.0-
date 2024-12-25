@@ -43,6 +43,12 @@ namespace WarehouseClient.Presenter
             _supplierView.AccountNumber = supplier.AccountNumber;
             _supplierView.TaxID = supplier.TaxId;
         }
+        public void AddSupplier() 
+        {
+            Supplier supplier = new Supplier();
+            _supplierRepository.SaveSupplier(_supplierView.SelectedSupplier, supplier);
+            UpdateSupplierListView();
+        }
 
         public void SaveSupplier()
         {

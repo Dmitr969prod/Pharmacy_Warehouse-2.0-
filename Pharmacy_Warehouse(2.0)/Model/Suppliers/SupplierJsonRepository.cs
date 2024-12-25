@@ -79,6 +79,7 @@ namespace Pharmacy_Warehouse.Model.Suppliers
         public void AddSupplier(Supplier supplier)
         {
             suppliers.Add(supplier);
+            SaveSupplierList(suppliers);
         }
 
         public void SaveSupplier(int Id, Supplier supplier)

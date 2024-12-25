@@ -21,7 +21,7 @@ namespace Pharmacy_Warehouse
         
         private List<Medicine> suppliedMedicines = new List<Medicine>();
 
-        public Supplier(string name, string address, string phone, string bankName, string accountNumber, string taxId)
+        public Supplier(string name=".", string address=".", string phone = ".", string bankName = ".", string accountNumber = ".", string taxId=".")
         {
             if (string.IsNullOrWhiteSpace(name))
                 throw new ArgumentException("Название поставщика не может быть пустым.");
