@@ -77,6 +77,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Medicines\IMedicineRepository.cs" />
+    <Compile Include="Model\Medicines\MedicineJsonRepository.cs" />
+    <Compile Include="Presenter\MedicinePresenter.cs" />
     <Compile Include="View\Main\IMainView.cs" />
     <Compile Include="View\Main\MainForm.cs">
       <SubType>Form</SubType>
@@ -89,9 +92,9 @@
     <Compile Include="Model\DeliveryNote.cs" />
     <Compile Include="Model\Invoice.cs" />
     <Compile Include="Model\Suppliers\ISupplierRepository.cs" />
-    <Compile Include="Model\Manufacture.cs" />
-    <Compile Include="Model\Medicine.cs" />
-    <Compile Include="Model\Packaging.cs" />
+    <Compile Include="Model\Medicines\Manufacture.cs" />
+    <Compile Include="Model\Medicines\Medicine.cs" />
+    <Compile Include="Model\Medicines\Packaging.cs" />
     <Compile Include="Model\Suppliers\Supplier.cs" />
     <Compile Include="Model\Suppliers\SupplierJsonRepository.cs" />
     <Compile Include="Presenter\MainPresenter.cs" />
