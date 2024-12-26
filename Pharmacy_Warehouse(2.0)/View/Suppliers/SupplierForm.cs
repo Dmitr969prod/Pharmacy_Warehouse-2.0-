@@ -87,7 +87,7 @@ namespace Pharmacy_Warehouse_2._0_.View.Suppliers
 
             _isEditMode = !_isEditMode;
 
-            this.EditSaveButton.Text = _isEditMode ? "edit" : "save";
+            this.EditSaveButton.Text = _isEditMode ? "Save" : "Edit";
 
             if (!_isEditMode)
             {
@@ -97,6 +97,7 @@ namespace Pharmacy_Warehouse_2._0_.View.Suppliers
 
         private void AddButton_Click(object sender, EventArgs e)
         {
+            
             Presenter.AddSupplier();
         }
     }

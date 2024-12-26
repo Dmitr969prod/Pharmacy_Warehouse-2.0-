@@ -46,7 +46,7 @@ namespace WarehouseClient.Presenter
         public void AddSupplier() 
         {
             Supplier supplier = new Supplier();
-            _supplierRepository.SaveSupplier(_supplierView.SelectedSupplier, supplier);
+            _supplierRepository.AddSupplier( supplier);
             UpdateSupplierListView();
         }
 
