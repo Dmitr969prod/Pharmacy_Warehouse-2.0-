@@ -15,6 +15,8 @@ namespace Pharmacy_Warehouse_2._0_.View.Suppliers
     public partial class SupplierForm : Form, ISupplierView
     {
         private bool _isEditMode = false;
+
+        public event EventHandler LoadMainForm;
         public SupplierForm()
         {
             InitializeComponent();
@@ -99,6 +101,11 @@ namespace Pharmacy_Warehouse_2._0_.View.Suppliers
         {
             
             Presenter.AddSupplier();
+        }
+
+        private void ComeBackButton_Click(object sender, EventArgs e)
+        {
+            LoadMainForm?.Invoke(this, EventArgs.Empty);
         }
     }
 }

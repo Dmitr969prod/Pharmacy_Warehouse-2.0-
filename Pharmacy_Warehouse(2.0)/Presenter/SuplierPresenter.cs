@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using WarehouseClient.View.Suppliers;
 using Pharmacy_Warehouse.Model.Suppliers;
 using Pharmacy_Warehouse;
+using Pharmacy_Warehouse_2._0_;
 
 
 namespace WarehouseClient.Presenter
@@ -15,6 +16,7 @@ namespace WarehouseClient.Presenter
         private readonly ISupplierView _supplierView;
         private readonly ISupplierRepository _supplierRepository;
         
+        
 
         public SuplierPresenter(ISupplierView supplierView, ISupplierRepository supplierRepository)
         {
@@ -22,7 +24,14 @@ namespace WarehouseClient.Presenter
             _supplierView = supplierView;
             supplierView.Presenter = this;
 
+            _supplierView.LoadMainForm += OnLoadMainForm;
+
             UpdateSupplierListView();
+        }
+
+        private void OnLoadMainForm(object sender, EventArgs e)
+        {
+            _supplierView.Hide();
         }
 
         private void UpdateSupplierListView()

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,7 +27,7 @@ namespace Pharmacy_Warehouse_2._0_
 
             var MainPresenter = new MainPresenter(view, viewSupplier);
             var presenter = new SuplierPresenter(viewSupplier, repository);
-
+            Console.WriteLine(Path.GetTempPath());
             Application.Run(view);
         }
     }

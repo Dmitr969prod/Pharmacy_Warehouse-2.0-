@@ -183,6 +183,7 @@
             this.ComeBackButton.TabIndex = 30;
             this.ComeBackButton.Text = "Назад";
             this.ComeBackButton.UseVisualStyleBackColor = true;
+            this.ComeBackButton.Click += new System.EventHandler(this.ComeBackButton_Click);
             // 
             // SuppliersListBox
             // 
@@ -226,6 +227,7 @@
             this.Controls.Add(this.ComeBackButton);
             this.Controls.Add(this.SuppliersListBox);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SupplierForm";
             this.Text = "SupplierForm";
             this.ResumeLayout(false);
