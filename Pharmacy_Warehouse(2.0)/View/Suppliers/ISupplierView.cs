@@ -16,6 +16,7 @@ namespace WarehouseClient.View.Suppliers
         string BankName { get; set; }
         string AccountNumber { get; set; }
         string TaxID { get; set; }
+        void Show();
         Presenter.SuplierPresenter Presenter { set; }
     }
 }

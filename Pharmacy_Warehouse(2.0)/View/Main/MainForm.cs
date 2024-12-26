@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace Pharmacy_Warehouse_2._0_
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form, IMainView
     {
-        public Form1()
+        public event EventHandler LoadSupplierForm;
+        public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void GetSupplierButton_Click(object sender, EventArgs e)
+        {
+            LoadSupplierForm?.Invoke(this, EventArgs.Empty);
         }
     }
 }
