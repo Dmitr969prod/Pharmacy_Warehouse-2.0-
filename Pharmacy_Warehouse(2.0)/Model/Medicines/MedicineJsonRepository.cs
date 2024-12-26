@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Pharmacy_Warehouse_2._0_.Model.Medicines
 {
-    public class MedicineJsonRepository
+    public class MedicineJsonRepository:IMedicineRepository
     {
         public readonly string JsonPath;
         public List<Medicine> medicines;
@@ -26,7 +26,7 @@ namespace Pharmacy_Warehouse_2._0_.Model.Medicines
 
         public void CreateMedicinesJsonStub()
         {
-            List<Medicine> medicines = new List<Medicine>();
+            List<Medicine> Medicines = new List<Medicine>();
 
             // Добавление первого лекарства
             Medicine aspirin = new Medicine(
@@ -38,7 +38,8 @@ namespace Pharmacy_Warehouse_2._0_.Model.Medicines
                 producer: new Manufacturer("Фармкомпания", "г. Москва, ул. Аптечная, д. 1", "+7 495 123-45-67"),
                 packaging: new Packaging("Коробка", "Картон", 30),
                 supplier: null
-            );
+
+            ) ;
             medicines.Add(aspirin);
 
             // Добавление второго лекарства
@@ -67,17 +68,19 @@ namespace Pharmacy_Warehouse_2._0_.Model.Medicines
             );
             medicines.Add(ibuprofen);
 
-            SaveMedicineList(medicines);
+            SaveMedicineList(Medicines);
         }
 
         public void SaveMedicineList(List<Medicine> medicines)
         {
-            var JsonString = JsonSerializer.Serialize(medicines);
+            var JsonString = JsonSerializer.Serialize(medicines, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(JsonPath, JsonString);
         }
-
+        
         public void LoadMedicinesFromFile() 
         {
+           
+
             var JsonString = File.ReadAllText(JsonPath);
             medicines = JsonSerializer.Deserialize<List<Medicine>>(JsonString);
         }

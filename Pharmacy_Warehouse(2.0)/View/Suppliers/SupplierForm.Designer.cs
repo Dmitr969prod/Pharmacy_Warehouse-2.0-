@@ -174,6 +174,7 @@
             this.NameBox.ReadOnly = true;
             this.NameBox.Size = new System.Drawing.Size(445, 52);
             this.NameBox.TabIndex = 31;
+            this.NameBox.TextChanged += new System.EventHandler(this.NameBox_TextChanged);
             // 
             // ComeBackButton
             // 

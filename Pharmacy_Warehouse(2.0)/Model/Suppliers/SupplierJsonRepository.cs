@@ -15,6 +15,7 @@ namespace Pharmacy_Warehouse.Model.Suppliers
 
         public SupplierJsonRepository(string filename)
         {
+            Console.WriteLine(Path.GetTempPath());
             JsonPath = Path.Combine(Path.GetTempPath(), filename);
             if(!File.Exists(JsonPath))
             {

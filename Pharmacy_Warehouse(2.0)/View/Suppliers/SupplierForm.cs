@@ -107,5 +107,10 @@ namespace Pharmacy_Warehouse_2._0_.View.Suppliers
         {
             LoadMainForm?.Invoke(this, EventArgs.Empty);
         }
+
+        private void NameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -75,6 +75,7 @@
             this.MedicineButton.TabIndex = 8;
             this.MedicineButton.Text = "Ассортимент лекарств";
             this.MedicineButton.UseVisualStyleBackColor = true;
+            this.MedicineButton.Click += new System.EventHandler(this.MedicineButton_Click);
             // 
             // Heading
             // 
