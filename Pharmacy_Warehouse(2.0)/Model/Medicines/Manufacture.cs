@@ -8,9 +8,11 @@ namespace Pharmacy_Warehouse
 {
     public class Manufacturer
     {
-        public string Name { get; private set; }      
-        public string Address { get; private set; }   
-        public string ContactInfo { get; private set; } 
+        public string Name { get; set; }      
+        public string Address { get; set; }   
+        public string ContactInfo { get; set; } 
+
+        public Manufacturer() { }
 
         public Manufacturer(string name, string address, string contactInfo)
         {

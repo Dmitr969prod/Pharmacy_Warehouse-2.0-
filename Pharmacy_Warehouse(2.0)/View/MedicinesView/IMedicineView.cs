@@ -22,7 +22,7 @@ namespace Pharmacy_Warehouse_2._0_.View.MedicinesView
         void SetPackingInfo(Packaging packaging);
         Packaging GetPackagingInfo();
         
-        Supplier Supplier { get; set; }
+        
 
         void Show();
         void Hide();

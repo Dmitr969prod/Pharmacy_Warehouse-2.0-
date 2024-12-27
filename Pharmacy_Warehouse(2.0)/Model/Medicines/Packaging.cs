@@ -8,9 +8,11 @@ namespace Pharmacy_Warehouse
 {
     public class Packaging
     {
-        public string Type { get; private set; }      
-        public string Material { get; private set; }  
-        public int Quantity { get; private set; }     
+        public string Type { get; set; }      
+        public string Material { get; set; }  
+        public int Quantity { get; set; }     
+
+        public Packaging() { }
 
         public Packaging(string type, string material, int quantity)
         {

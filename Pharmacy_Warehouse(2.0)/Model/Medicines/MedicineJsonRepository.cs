@@ -26,7 +26,7 @@ namespace Pharmacy_Warehouse_2._0_.Model.Medicines
 
         public void CreateMedicinesJsonStub()
         {
-            List<Medicine> Medicines = new List<Medicine>();
+            
 
             // Добавление первого лекарства
             Medicine aspirin = new Medicine(
@@ -36,8 +36,8 @@ namespace Pharmacy_Warehouse_2._0_.Model.Medicines
                 expirationDate: new DateTime(2025, 1, 10),
                 regNumber: "RU-456789",
                 producer: new Manufacturer("Фармкомпания", "г. Москва, ул. Аптечная, д. 1", "+7 495 123-45-67"),
-                packaging: new Packaging("Коробка", "Картон", 30),
-                supplier: null
+                packaging: new Packaging("Коробка", "Картон", 30)
+                
 
             ) ;
             medicines.Add(aspirin);
@@ -50,8 +50,8 @@ namespace Pharmacy_Warehouse_2._0_.Model.Medicines
                 expirationDate: new DateTime(2025, 3, 15),
                 regNumber: "RU-123456",
                 producer: new Manufacturer("Фармкомпания 2", "г. Санкт-Петербург, ул. Аптечная, д. 2", "+7 812 555-12-34"),
-                packaging: new Packaging("Блистер", "Пластик", 10),
-                supplier: null
+                packaging: new Packaging("Блистер", "Пластик", 10)
+                
             );
             medicines.Add(paracetamol);
 
@@ -63,12 +63,12 @@ namespace Pharmacy_Warehouse_2._0_.Model.Medicines
                 expirationDate: new DateTime(2025, 5, 20),
                 regNumber: "RU-789101",
                 producer: new Manufacturer("Фармкомпания 3", "г. Казань, ул. Аптечная, д. 3", "+7 843 333-22-11"),
-                packaging: new Packaging("Флакон", "Пластик", 50),
-                supplier: null
+                packaging: new Packaging("Флакон", "Пластик", 50)
+                
             );
             medicines.Add(ibuprofen);
 
-            SaveMedicineList(Medicines);
+            SaveMedicineList(medicines);
         }
 
         public void SaveMedicineList(List<Medicine> medicines)

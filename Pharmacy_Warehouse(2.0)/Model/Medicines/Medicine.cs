@@ -8,17 +8,18 @@ namespace Pharmacy_Warehouse
 {
     public class Medicine
     {
-        public string Name { get; private set; }
-        public string Category { get; private set; }
-        public DateTime ManufactureDate { get; private set; }
-        public DateTime ExpirationDate { get; private set; }
-        public string RegNumber { get; private set; }
-        public Manufacturer Producer { get; private set; }
-        public Packaging PackagingInfo { get; private set; }
-        public Supplier Supplier { get; private set; }
+        public string Name { get; set; }
+        public string Category { get; set; }
+        public DateTime ManufactureDate { get; set; }
+        public DateTime ExpirationDate { get; set; }
+        public string RegNumber { get; set; }
+        public Manufacturer Producer { get; set; }
+        public Packaging PackagingInfo { get; set; }
+
+        public Medicine() { }
 
         public Medicine(string name, string category, DateTime manufactureDate,
-                        DateTime expirationDate, string regNumber, Manufacturer producer, Packaging packaging, Supplier supplier)
+                        DateTime expirationDate, string regNumber, Manufacturer producer, Packaging packaging)
         {
             Name = name ?? throw new ArgumentNullException(nameof(name));
             Category = category ?? throw new ArgumentNullException(nameof(category));
@@ -29,7 +30,7 @@ namespace Pharmacy_Warehouse
             RegNumber = regNumber ?? throw new ArgumentNullException(nameof(regNumber));
             Producer = producer ?? throw new ArgumentNullException(nameof(producer));
             PackagingInfo = packaging ?? throw new ArgumentNullException(nameof(packaging));
-            Supplier = supplier;
+            
         }
 
         public bool IsExpired()
