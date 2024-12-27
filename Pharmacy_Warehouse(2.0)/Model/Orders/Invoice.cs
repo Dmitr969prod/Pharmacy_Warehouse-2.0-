@@ -8,13 +8,13 @@ namespace Pharmacy_Warehouse
 {
     public class Invoice
     {
-        public string Id { get; private set; }
-        public DateTime Date { get; private set; }
-        public Customer Customer { get; private set; }
-        public string SellerName { get; private set; }
-        private List<DeliveryItem> items = new List<DeliveryItem>();
+        public string Id { get; set; }
+        public DateTime Date { get; set; }
+        public Customer Customer { get; set; }
+        public string SellerName { get; set; }
+        public DeliveryItem DeliveryItem { get; set; }
 
-        public Invoice(string id, DateTime date, Customer customer, string sellerName)
+        public Invoice(string id, DateTime date, Customer customer, string sellerName, DeliveryItem deliveryItem)
         {
             if (string.IsNullOrWhiteSpace(id))
                 throw new ArgumentException("Номер счета не может быть пустым.");
@@ -24,22 +24,18 @@ namespace Pharmacy_Warehouse
                 throw new ArgumentNullException(nameof(customer));
             if (string.IsNullOrWhiteSpace(sellerName))
                 throw new ArgumentException("Фамилия продавца не может быть пустой.");
-
+            if(deliveryItem == null)
+                throw new ArgumentNullException(nameof(deliveryItem));
             Id = id;
             Date = date;
             Customer = customer;
             SellerName = sellerName;
+            DeliveryItem = deliveryItem;
         }
 
-        public void AddItem(DeliveryItem item)
-        {
-            if (item == null)
-                throw new ArgumentNullException(nameof(item));
+       
 
-            items.Add(item);
-        }
-
-        public decimal TotalCost
+       /* public decimal TotalCost
         {
             get
             {
@@ -56,11 +52,11 @@ namespace Pharmacy_Warehouse
                 total += item.TotalPrice;
             }
             return total;
-        }
+        }*/
 
-        public override string ToString()
+        /*public override string ToString()
         {
             return $"Счет-фактура №{Id}, Дата: {Date.ToShortDateString()}, Покупатель: {Customer.Name}, Продавец: {SellerName}, Сумма: {TotalCost:C}";
-        }
+        }*/
     }
 }

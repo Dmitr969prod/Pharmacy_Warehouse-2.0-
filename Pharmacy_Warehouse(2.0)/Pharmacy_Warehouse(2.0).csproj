@@ -81,7 +81,10 @@
     <Compile Include="Model\Delivery\IDelieveryNoteRepository.cs" />
     <Compile Include="Model\Medicines\IMedicineRepository.cs" />
     <Compile Include="Model\Medicines\MedicineJsonRepository.cs" />
+    <Compile Include="Model\Orders\IInvoiceRepository.cs" />
+    <Compile Include="Model\Orders\InvoiceJsonRepository.cs" />
     <Compile Include="Presenter\DeliveryNotePresenter.cs" />
+    <Compile Include="Presenter\InvoicePresenter.cs" />
     <Compile Include="Presenter\MedicinePresenter.cs" />
     <Compile Include="View\DelieveryNotesView\AddDelievery.cs">
       <SubType>Form</SubType>
@@ -96,6 +99,13 @@
       <DependentUpon>DeliveryNoteView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\DelieveryNotesView\IDeliveryNoteView.cs" />
+    <Compile Include="View\InvoiceView\IInvoiceView.cs" />
+    <Compile Include="View\InvoiceView\InvoiceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InvoiceView\InvoiceView.Designer.cs">
+      <DependentUpon>InvoiceView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MainView\IMainView.cs" />
     <Compile Include="View\MainView\MainForm.cs">
       <SubType>Form</SubType>
@@ -103,10 +113,10 @@
     <Compile Include="View\MainView\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\Orders\Customer.cs" />
     <Compile Include="Model\Delivery\DeliveryItem.cs" />
     <Compile Include="Model\Delivery\DeliveryNote.cs" />
-    <Compile Include="Model\Invoice.cs" />
+    <Compile Include="Model\Orders\Invoice.cs" />
     <Compile Include="Model\Suppliers\ISupplierRepository.cs" />
     <Compile Include="Model\Medicines\Manufacture.cs" />
     <Compile Include="Model\Medicines\Medicine.cs" />
@@ -124,17 +134,17 @@
     <Compile Include="View\MedicinesView\MedicineForm.Designer.cs">
       <DependentUpon>MedicineForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Suppliers\ISupplierView.cs" />
-    <Compile Include="View\Suppliers\SupplierAdd.cs">
+    <Compile Include="View\SuppliersView\ISupplierView.cs" />
+    <Compile Include="View\SuppliersView\SupplierAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Suppliers\SupplierAdd.Designer.cs">
+    <Compile Include="View\SuppliersView\SupplierAdd.Designer.cs">
       <DependentUpon>SupplierAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Suppliers\SupplierForm.cs">
+    <Compile Include="View\SuppliersView\SupplierForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Suppliers\SupplierForm.Designer.cs">
+    <Compile Include="View\SuppliersView\SupplierForm.Designer.cs">
       <DependentUpon>SupplierForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="View\DelieveryNotesView\AddDelievery.resx">
@@ -142,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\DelieveryNotesView\DeliveryNoteView.resx">
       <DependentUpon>DeliveryNoteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InvoiceView\InvoiceView.resx">
+      <DependentUpon>InvoiceView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainView\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -159,10 +172,10 @@
       <DependentUpon>MedicineForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\OrderForm.resx" />
-    <EmbeddedResource Include="View\Suppliers\SupplierAdd.resx">
+    <EmbeddedResource Include="View\SuppliersView\SupplierAdd.resx">
       <DependentUpon>SupplierAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Suppliers\SupplierForm.resx">
+    <EmbeddedResource Include="View\SuppliersView\SupplierForm.resx">
       <DependentUpon>SupplierForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

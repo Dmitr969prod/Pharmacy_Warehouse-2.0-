@@ -118,7 +118,7 @@ namespace Pharmacy_Warehouse_2._0_.View.MedicinesView
             LoadMainForm?.Invoke(this, EventArgs.Empty);
         }
 
-        private void EditSaveButton_Click(object sender, EventArgs e)
+        /*private void EditSaveButton_Click(object sender, EventArgs e)
         {
             this.NameManufactureBox.ReadOnly = _isEditMode;
             this.AddressManufactureBox.ReadOnly= _isEditMode;
@@ -142,6 +142,6 @@ namespace Pharmacy_Warehouse_2._0_.View.MedicinesView
             {
                 Presenter.SaveMedicine();
             }
-        }
+        }*/
     }
 }

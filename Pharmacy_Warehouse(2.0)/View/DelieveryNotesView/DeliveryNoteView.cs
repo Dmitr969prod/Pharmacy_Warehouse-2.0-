@@ -136,6 +136,12 @@ namespace Pharmacy_Warehouse_2._0_.View.DelieveryNoteView
                 Presenter.UpdateDeliveryNoteView(DeliveryNotesListBox.SelectedIndex);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           AddDelievery addDelievery = new AddDelievery();
+            addDelievery.Show();
+        }
     }
 
 }

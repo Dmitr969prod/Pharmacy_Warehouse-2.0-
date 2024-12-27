@@ -41,8 +41,6 @@
             this.ExpirationDateBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.RegNumberBox = new System.Windows.Forms.TextBox();
-            this.EditSaveButton = new System.Windows.Forms.Button();
-            this.AddButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.NameManufactureBox = new System.Windows.Forms.TextBox();
@@ -178,25 +176,6 @@
             this.RegNumberBox.ReadOnly = true;
             this.RegNumberBox.Size = new System.Drawing.Size(404, 51);
             this.RegNumberBox.TabIndex = 42;
-            // 
-            // EditSaveButton
-            // 
-            this.EditSaveButton.Location = new System.Drawing.Point(1136, 578);
-            this.EditSaveButton.Name = "EditSaveButton";
-            this.EditSaveButton.Size = new System.Drawing.Size(95, 33);
-            this.EditSaveButton.TabIndex = 47;
-            this.EditSaveButton.Text = "Edit";
-            this.EditSaveButton.UseVisualStyleBackColor = true;
-            this.EditSaveButton.Click += new System.EventHandler(this.EditSaveButton_Click);
-            // 
-            // AddButton
-            // 
-            this.AddButton.Location = new System.Drawing.Point(927, 578);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(188, 33);
-            this.AddButton.TabIndex = 46;
-            this.AddButton.Text = "Добавить лекарство";
-            this.AddButton.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -345,8 +324,6 @@
             this.Controls.Add(this.NameManufactureBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.EditSaveButton);
-            this.Controls.Add(this.AddButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.RegNumberBox);
             this.Controls.Add(this.label3);
@@ -383,8 +360,6 @@
         private System.Windows.Forms.TextBox ExpirationDateBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox RegNumberBox;
-        private System.Windows.Forms.Button EditSaveButton;
-        private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox NameManufactureBox;

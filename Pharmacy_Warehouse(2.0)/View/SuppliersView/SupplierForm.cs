@@ -78,7 +78,7 @@ namespace Pharmacy_Warehouse_2._0_.View.Suppliers
             Presenter.UpdateSupplierView(SuppliersListBox.SelectedIndex);
         }
 
-        private void EditSaveButton_Click(object sender, EventArgs e)
+       /* private void EditSaveButton_Click(object sender, EventArgs e)
         {
             this.NameBox.ReadOnly = _isEditMode;
             this.AddressBox.ReadOnly = _isEditMode;
@@ -95,7 +95,7 @@ namespace Pharmacy_Warehouse_2._0_.View.Suppliers
             {
                 Presenter.SaveSupplier();
             }
-        }
+        }*/
 
         private void AddButton_Click(object sender, EventArgs e)
         {

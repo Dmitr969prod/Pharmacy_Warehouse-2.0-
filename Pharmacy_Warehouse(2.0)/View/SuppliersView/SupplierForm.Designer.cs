@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.EditSaveButton = new System.Windows.Forms.Button();
-            this.AddButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,26 +44,6 @@
             this.SuppliersListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // EditSaveButton
-            // 
-            this.EditSaveButton.Location = new System.Drawing.Point(1166, 649);
-            this.EditSaveButton.Name = "EditSaveButton";
-            this.EditSaveButton.Size = new System.Drawing.Size(95, 33);
-            this.EditSaveButton.TabIndex = 44;
-            this.EditSaveButton.Text = "Edit";
-            this.EditSaveButton.UseVisualStyleBackColor = true;
-            this.EditSaveButton.Click += new System.EventHandler(this.EditSaveButton_Click);
-            // 
-            // AddButton
-            // 
-            this.AddButton.Location = new System.Drawing.Point(957, 649);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(188, 33);
-            this.AddButton.TabIndex = 43;
-            this.AddButton.Text = "Добавить поставщика";
-            this.AddButton.UseVisualStyleBackColor = true;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // label7
             // 
@@ -211,8 +189,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1296, 740);
-            this.Controls.Add(this.EditSaveButton);
-            this.Controls.Add(this.AddButton);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -237,9 +213,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button EditSaveButton;
-        private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

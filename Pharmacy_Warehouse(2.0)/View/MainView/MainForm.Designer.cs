@@ -55,6 +55,7 @@
             this.CustomerOrderButton.TabIndex = 10;
             this.CustomerOrderButton.Text = "Заказ от покупателя\r\n";
             this.CustomerOrderButton.UseVisualStyleBackColor = true;
+            this.CustomerOrderButton.Click += new System.EventHandler(this.CustomerOrderButton_Click);
             // 
             // DeliverButton
             // 
