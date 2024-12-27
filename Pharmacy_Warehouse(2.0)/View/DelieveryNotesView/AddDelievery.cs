@@ -102,6 +102,48 @@ namespace Pharmacy_Warehouse_2._0_.View.DelieveryNotesView
 
         private void AddButton_Click(object sender, EventArgs e)
         {
+            
+            if (string.IsNullOrWhiteSpace(IdBox.Text))
+            {
+                MessageBox.Show("Введите ID.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            
+            if (!DateTime.TryParse(DateBox.Text, out DateTime parsedDate))
+            {
+                MessageBox.Show("Введите корректную дату в формате ДД.ММ.ГГГГ.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            
+            if (!decimal.TryParse(PriceBox.Text, out decimal parsedPrice) || parsedPrice <= 0)
+            {
+                MessageBox.Show("Введите корректную положительную цену.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            
+            if (!int.TryParse(CountBox.Text, out int parsedCount) || parsedCount <= 0)
+            {
+                MessageBox.Show("Введите корректное положительное количество.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            
+            if (SuppliersComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Выберите поставщика.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            
+            if (MedicinesComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Выберите лекарство.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             presenter.SetAdderView(this);
             presenter.AddDeliveryNote();
         }
