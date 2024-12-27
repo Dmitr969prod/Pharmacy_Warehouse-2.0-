@@ -62,9 +62,9 @@ namespace Pharmacy_Warehouse_2._0_.View.MedicinesView
 
         public void SetManufactureData(Manufacturer manufacture)
         {
-            /*this.NameManufactureBox.Text = manufacture.Name;
+            this.NameManufactureBox.Text = manufacture.Name;
             this.AddressManufactureBox.Text = manufacture.Address;
-            this.PhoneNumberBox.Text = manufacture.ContactInfo;*/
+            this.PhoneNumberBox.Text = manufacture.ContactInfo;
         }
         
         public Manufacturer GetManufactureData()
@@ -78,9 +78,9 @@ namespace Pharmacy_Warehouse_2._0_.View.MedicinesView
 
         public void SetPackingInfo(Packaging packaging)
         {
-            /*this.TypeBox.Text = packaging.Type;
+            this.TypeBox.Text = packaging.Type;
             this.MaterialBox.Text = packaging.Material;
-            this.QuantityBox.Text = packaging.Quantity.ToString();*/
+            this.QuantityBox.Text = packaging.Quantity.ToString();
         }
 
         public Packaging GetPackagingInfo()

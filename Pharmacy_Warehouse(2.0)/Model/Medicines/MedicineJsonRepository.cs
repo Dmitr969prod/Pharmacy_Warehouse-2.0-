@@ -79,8 +79,6 @@ namespace Pharmacy_Warehouse_2._0_.Model.Medicines
         
         public void LoadMedicinesFromFile() 
         {
-           
-
             var JsonString = File.ReadAllText(JsonPath);
             medicines = JsonSerializer.Deserialize<List<Medicine>>(JsonString);
         }

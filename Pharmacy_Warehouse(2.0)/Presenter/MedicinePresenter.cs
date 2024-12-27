@@ -54,12 +54,12 @@ namespace Pharmacy_Warehouse_2._0_.Presenter
             
             
         }
-       /* public void AddSupplier()
+        public void AddSupplier()
         {
             Medicine medicine = new Medicine();
             _medicineRepository.AddMedicine(medicine);
             UpdateMedicineListView();
-        }*/
+        }
 
         public void SaveMedicine()
         {
