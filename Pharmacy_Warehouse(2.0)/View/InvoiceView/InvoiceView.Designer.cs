@@ -47,8 +47,6 @@
             this.MedicineListLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.SellerNameBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.TotalCostBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label6
@@ -226,31 +224,11 @@
             this.SellerNameBox.Size = new System.Drawing.Size(347, 41);
             this.SellerNameBox.TabIndex = 91;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(413, 488);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 20);
-            this.label7.TabIndex = 94;
-            this.label7.Text = "Общая сумма";
-            // 
-            // TotalCostBox
-            // 
-            this.TotalCostBox.Location = new System.Drawing.Point(417, 511);
-            this.TotalCostBox.Multiline = true;
-            this.TotalCostBox.Name = "TotalCostBox";
-            this.TotalCostBox.ReadOnly = true;
-            this.TotalCostBox.Size = new System.Drawing.Size(347, 41);
-            this.TotalCostBox.TabIndex = 93;
-            // 
             // InvoiceView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1238, 632);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.TotalCostBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.SellerNameBox);
             this.Controls.Add(this.label6);
@@ -299,7 +277,5 @@
         private System.Windows.Forms.Label MedicineListLabel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox SellerNameBox;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox TotalCostBox;
     }
 }

@@ -17,7 +17,7 @@ namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
         /*Customer Customer { get; set; }*/
         string SellerName { get; set; }
         DeliveryItem DeliveryItem { get; set; }
-        int TotalCost {  get; set; }
+        
         int Quantity {  get; set; }
         decimal PricePerUnit {  get; set; }
         string CustomerName { get; set; }

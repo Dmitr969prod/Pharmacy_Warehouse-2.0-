@@ -127,6 +127,54 @@ namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
 
         private void AddButton_Click(object sender, EventArgs e)
         {
+            // Проверка ID
+            if (string.IsNullOrWhiteSpace(ID.Text))
+            {
+                MessageBox.Show("Введите идентификатор счета.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Проверка выбранного клиента
+            if (CustomersComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Выберите клиента из списка.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Проверка выбранного лекарства
+            if (MedicinesComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Выберите медикамент из списка.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Проверка цены за единицу
+            if (!decimal.TryParse(PriceBox.Text, out decimal price) || price <= 0)
+            {
+                MessageBox.Show("Введите корректную цену за единицу (положительное число).", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Проверка количества
+            if (!int.TryParse(CountBox.Text, out int quantity) || quantity <= 0)
+            {
+                MessageBox.Show("Введите корректное количество (целое положительное число).", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Проверка имени продавца
+            if (string.IsNullOrWhiteSpace(SellerNameBox.Text))
+            {
+                MessageBox.Show("Введите имя продавца.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Проверка даты
+            if (!DateTime.TryParse(DateBox.Text, out DateTime date) || date > DateTime.Now)
+            {
+                MessageBox.Show("Введите корректную дату (она не может быть в будущем).", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             presenter.SetAdderView(this);
             presenter.AddInvoice();
         }

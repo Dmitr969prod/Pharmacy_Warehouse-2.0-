@@ -76,11 +76,7 @@ namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
             set { this.QuantityBox.Text = value.ToString(); }
         }
 
-        public int TotalCost
-        {
-            get { return int.Parse(this.TotalCostBox.Text); }
-            set { this.TotalCostBox.Text = value.ToString(); }
-        }
+        
 
         public DeliveryItem DeliveryItem
         {
