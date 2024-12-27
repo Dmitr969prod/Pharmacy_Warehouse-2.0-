@@ -25,7 +25,7 @@ namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
         public int SelectedInvoiceIndex
         {
             get { return this.InvoiceListBox.SelectedIndex; }
-            set { this.InvoiceListBox.SelectedIndex = value; }
+            set { if (value >= 0 && value < InvoiceListBox.Items.Count) { this.InvoiceListBox.SelectedIndex = value; } }
         }
 
         public string Id
@@ -70,7 +70,7 @@ namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
             set { this.QuantityBox.Text = value.ToString(); }
         }
 
-        
+
 
         public DeliveryItem DeliveryItem
         {
@@ -79,8 +79,8 @@ namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
                 return new DeliveryItem(
                     new Medicine(
                         name: this.MedicineName,
-                        category: null, 
-                        manufactureDate: DateTime.MinValue, 
+                        category: null,
+                        manufactureDate: DateTime.MinValue,
                         expirationDate: DateTime.MinValue,
                         regNumber: null,
                         producer: null,
@@ -129,7 +129,11 @@ namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
         private void DeleteButton_Click_1(object sender, EventArgs e)
         {
             Presenter.DeleteInvoice();
+            if (InvoiceListBox.Items.Count > 0) { SelectedInvoiceIndex = InvoiceListBox.Items.Count - 1; }
+            else
+            {
+                SelectedInvoiceIndex = -1; 
+            }
         }
     }
-
 }
