@@ -199,7 +199,7 @@
             // 
             // NameManufactureBox
             // 
-            this.NameManufactureBox.Location = new System.Drawing.Point(85, 479);
+            this.NameManufactureBox.Location = new System.Drawing.Point(85, 489);
             this.NameManufactureBox.Multiline = true;
             this.NameManufactureBox.Name = "NameManufactureBox";
             this.NameManufactureBox.ReadOnly = true;
@@ -208,16 +208,16 @@
             // 
             // AddressManufactureBox
             // 
-            this.AddressManufactureBox.Location = new System.Drawing.Point(85, 540);
+            this.AddressManufactureBox.Location = new System.Drawing.Point(85, 555);
             this.AddressManufactureBox.Multiline = true;
             this.AddressManufactureBox.Name = "AddressManufactureBox";
             this.AddressManufactureBox.ReadOnly = true;
-            this.AddressManufactureBox.Size = new System.Drawing.Size(235, 40);
+            this.AddressManufactureBox.Size = new System.Drawing.Size(235, 52);
             this.AddressManufactureBox.TabIndex = 51;
             // 
             // PhoneNumberBox
             // 
-            this.PhoneNumberBox.Location = new System.Drawing.Point(85, 603);
+            this.PhoneNumberBox.Location = new System.Drawing.Point(85, 632);
             this.PhoneNumberBox.Multiline = true;
             this.PhoneNumberBox.Name = "PhoneNumberBox";
             this.PhoneNumberBox.ReadOnly = true;
@@ -235,7 +235,7 @@
             // 
             // MaterialBox
             // 
-            this.MaterialBox.Location = new System.Drawing.Point(485, 540);
+            this.MaterialBox.Location = new System.Drawing.Point(485, 555);
             this.MaterialBox.Multiline = true;
             this.MaterialBox.Name = "MaterialBox";
             this.MaterialBox.ReadOnly = true;
@@ -244,7 +244,7 @@
             // 
             // QuantityBox
             // 
-            this.QuantityBox.Location = new System.Drawing.Point(485, 603);
+            this.QuantityBox.Location = new System.Drawing.Point(485, 621);
             this.QuantityBox.Multiline = true;
             this.QuantityBox.Name = "QuantityBox";
             this.QuantityBox.ReadOnly = true;
@@ -254,7 +254,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(81, 456);
+            this.label6.Location = new System.Drawing.Point(81, 466);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 20);
             this.label6.TabIndex = 56;
@@ -263,7 +263,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(81, 523);
+            this.label7.Location = new System.Drawing.Point(81, 532);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(57, 20);
             this.label7.TabIndex = 57;
@@ -272,7 +272,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(81, 584);
+            this.label8.Location = new System.Drawing.Point(81, 609);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(142, 20);
             this.label8.TabIndex = 58;
@@ -290,7 +290,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(481, 522);
+            this.label10.Location = new System.Drawing.Point(481, 532);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(86, 20);
             this.label10.TabIndex = 60;
@@ -299,7 +299,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(481, 578);
+            this.label11.Location = new System.Drawing.Point(481, 598);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(185, 20);
             this.label11.TabIndex = 61;

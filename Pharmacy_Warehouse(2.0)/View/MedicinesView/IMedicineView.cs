@@ -17,12 +17,8 @@ namespace Pharmacy_Warehouse_2._0_.View.MedicinesView
         DateTime ManufactureDate { get; set; }
         DateTime ExpirationDate { get; set; }
         string RegNumber { get; set; }
-        /* string Producer { get; set; }
-         string PackagingInfo { get; set; }*/
-        //void SetManufactureData(Manufacturer manufacture);
-        Manufacturer GetManufactureData();
-        //void SetPackingInfo(Packaging packaging);
-        Packaging GetPackagingInfo();
+        Manufacturer Manufacture { get; set; }
+        Packaging Packaging { get; set; }
         void Show();
         void Hide();
         Presenter.MedicinePresenter Presenter { set; }

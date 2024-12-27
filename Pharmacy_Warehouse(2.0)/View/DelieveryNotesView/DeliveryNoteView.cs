@@ -70,8 +70,8 @@ namespace Pharmacy_Warehouse_2._0_.View.DelieveryNoteView
                 return new DeliveryItem(
                     new Medicine(
                         name: this.MedicineNameBox.Text,
-                        category: null, // Категория не нужна в форме.
-                        manufactureDate: DateTime.MinValue, // Даты не нужны в форме.
+                        category: null, 
+                        manufactureDate: DateTime.MinValue, 
                         expirationDate: DateTime.MinValue,
                         regNumber: null,
                         producer: null,
@@ -106,10 +106,6 @@ namespace Pharmacy_Warehouse_2._0_.View.DelieveryNoteView
             Presenter.AddDeliveryNote();
         }
 
-        private void DeleteButton_Click(object sender, EventArgs e)
-        {
-            /*Presenter.DeleteDeliveryNote();*/
-        }
         private void label2_Click(object sender, EventArgs e)
         {
 

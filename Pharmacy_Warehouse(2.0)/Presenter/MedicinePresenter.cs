@@ -48,12 +48,8 @@ namespace Pharmacy_Warehouse_2._0_.Presenter
             _medicineView.ManufactureDate = medicine.ManufactureDate;
             _medicineView.ExpirationDate = medicine.ExpirationDate;
             _medicineView.RegNumber = medicine.RegNumber;
-            /*_medicineView.Producer = medicine.Producer?.ToString();
-
-            _medicineView.PackagingInfo = medicine.PackagingInfo?.ToString();*/
-
-
-
+            _medicineView.Manufacture = medicine.Producer;
+            _medicineView.Packaging = medicine.PackagingInfo;
         }
         public void AddSupplier()
         {
@@ -65,7 +61,7 @@ namespace Pharmacy_Warehouse_2._0_.Presenter
         public void SaveMedicine()
         {
             Medicine medicine = new Medicine(_medicineView.Name, _medicineView.Category, _medicineView.ManufactureDate,
-                _medicineView.ExpirationDate, _medicineView.RegNumber, _medicineView.GetManufactureData(), _medicineView.GetPackagingInfo() );
+                _medicineView.ExpirationDate, _medicineView.RegNumber, _medicineView.Manufacture, _medicineView.Packaging );
             _medicineRepository.SaveMedicine(_medicineView.SelectedMedicine, medicine);
             UpdateMedicineListView();
         }

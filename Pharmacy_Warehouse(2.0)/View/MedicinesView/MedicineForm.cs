@@ -59,50 +59,48 @@ namespace Pharmacy_Warehouse_2._0_.View.MedicinesView
             get { return this.RegNumberBox.Text; }
             set { this.RegNumberBox.Text = value; }
         }
-        /*public Manufacturer Producer
+        public Manufacturer Manufacture
         {
-            get { return GetManufactureData(); }
-            set { SetManufactureData(value); }
-        }
-        public Packaging PackagingInfo
-        {
-            get { return GetPackagingInfo(); }
-            set { SetPackingInfo(value); }
-        }*/
-       /* public void SetManufactureData(Manufacturer manufacture)
-        {
-            this.NameManufactureBox.Text = manufacture.Name;
-            this.AddressManufactureBox.Text = manufacture.Address;
-            this.PhoneNumberBox.Text = manufacture.ContactInfo;
-        }*/
-
-        public Manufacturer GetManufactureData()
-        {
-            return new Manufacturer(
-                name: this.NameManufactureBox.Text,
-                address: this.AddressManufactureBox.Text,
-                contactInfo: this.PhoneNumberBox.Text
-                );
+            get
+            {
+                return new Manufacturer(
+                    name:this.NameManufactureBox.Text,
+                    address:this.AddressManufactureBox.Text,
+                    contactInfo:this.PhoneNumberBox.Text
+                    );
+            }
+            set
+            {
+                if( value != null)
+                {
+                    this.NameManufactureBox.Text = value.Name;
+                    this.AddressManufactureBox.Text = value.Address;
+                    this.PhoneNumberBox.Text = value.ContactInfo;
+                }
+            }
         }
 
-       /* public void SetPackingInfo(Packaging packaging)
+        public Packaging Packaging
         {
-            this.TypeBox.Text = packaging.Type;
-            this.MaterialBox.Text = packaging.Material;
-            this.QuantityBox.Text = packaging.Quantity.ToString();
-        }*/
-
-        public Packaging GetPackagingInfo()
-        {
-            return new Packaging(
-                type: this.TypeBox.Text,
-                material: this.MaterialBox.Text,
-                quantity: int.Parse(this.QuantityBox.Text)
-                );
+            get
+            {
+                return new Packaging(
+                    type: this.TypeBox.Text,
+                    material:this.MaterialBox.Text,
+                    quantity:int.Parse(this.QuantityBox.Text)
+                    ) ;
+            }
+            set
+            {
+                if ( value != null)
+                {
+                    this.TypeBox.Text = value.Type;
+                    this.MaterialBox.Text = value.Material;
+                    this.QuantityBox.Text = value.Quantity.ToString();
+                }
+            }
         }
-
-       
-
+  
         public Presenter.MedicinePresenter Presenter
         {
             private get; set;
