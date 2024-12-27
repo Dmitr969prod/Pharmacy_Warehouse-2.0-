@@ -120,10 +120,7 @@ namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
 
         public Presenter.InvoicePresenter Presenter { get; set; }
 
-        private void AddButton_Click(object sender, EventArgs e)
-        {
-            Presenter.AddInvoice();
-        }
+       
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
@@ -147,6 +144,19 @@ namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
         {
             LoadMainForm?.Invoke(this, EventArgs.Empty);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            InvoiceAdd invoiceAdd = new InvoiceAdd();
+            invoiceAdd.Show();
+        }
+
+        private void DeleteButton_Click_1(object sender, EventArgs e)
+        {
+            Presenter.DeleteInvoice();
+        }
+
+
 
         /*private void AddInvoiceButton_Click(object sender, EventArgs e)
         {

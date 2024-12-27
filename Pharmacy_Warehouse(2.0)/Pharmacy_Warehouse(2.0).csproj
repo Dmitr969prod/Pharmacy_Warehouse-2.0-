@@ -100,6 +100,12 @@
     </Compile>
     <Compile Include="View\DelieveryNotesView\IDeliveryNoteView.cs" />
     <Compile Include="View\InvoiceView\IInvoiceView.cs" />
+    <Compile Include="View\InvoiceView\InvoiceAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InvoiceView\InvoiceAdd.Designer.cs">
+      <DependentUpon>InvoiceAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\InvoiceView\InvoiceView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\DelieveryNotesView\DeliveryNoteView.resx">
       <DependentUpon>DeliveryNoteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InvoiceView\InvoiceAdd.resx">
+      <DependentUpon>InvoiceAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\InvoiceView\InvoiceView.resx">
       <DependentUpon>InvoiceView.cs</DependentUpon>

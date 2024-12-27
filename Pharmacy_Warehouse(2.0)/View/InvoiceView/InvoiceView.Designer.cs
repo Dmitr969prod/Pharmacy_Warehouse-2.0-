@@ -40,7 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.IdTextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.DeleteButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.ComeBackButton = new System.Windows.Forms.Button();
             this.InvoiceListBox = new System.Windows.Forms.ListBox();
@@ -158,14 +158,15 @@
             this.IdTextBox.Size = new System.Drawing.Size(347, 41);
             this.IdTextBox.TabIndex = 79;
             // 
-            // button1
+            // DeleteButton
             // 
-            this.button1.Location = new System.Drawing.Point(640, 441);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 33);
-            this.button1.TabIndex = 78;
-            this.button1.Text = "Удалить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.DeleteButton.Location = new System.Drawing.Point(640, 441);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(97, 33);
+            this.DeleteButton.TabIndex = 78;
+            this.DeleteButton.Text = "Удалить";
+            this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click_1);
             // 
             // button2
             // 
@@ -175,6 +176,7 @@
             this.button2.TabIndex = 77;
             this.button2.Text = "Добавить";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // ComeBackButton
             // 
@@ -263,7 +265,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.IdTextBox);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.ComeBackButton);
             this.Controls.Add(this.InvoiceListBox);
@@ -290,7 +292,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox IdTextBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button ComeBackButton;
         private System.Windows.Forms.ListBox InvoiceListBox;
