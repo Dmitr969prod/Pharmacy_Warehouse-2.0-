@@ -65,6 +65,7 @@
             this.DeliverButton.TabIndex = 9;
             this.DeliverButton.Text = "Новая поставка";
             this.DeliverButton.UseVisualStyleBackColor = true;
+            this.DeliverButton.Click += new System.EventHandler(this.DeliverButton_Click);
             // 
             // MedicineButton
             // 

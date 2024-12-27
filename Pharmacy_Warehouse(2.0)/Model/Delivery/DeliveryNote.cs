@@ -15,55 +15,39 @@ namespace Pharmacy_Warehouse
     {
         public string Id { get; private set; }
         public DateTime Date { get; private set; }
-        private List<DeliveryItem> items = new List<DeliveryItem>();
+        public Supplier Supplier { get; private set; }
+        public DeliveryItem Item { get; private set; }
 
-        public DeliveryNote(string id, DateTime date)
+        public DeliveryNote(string id, DateTime date, Supplier supplier, DeliveryItem item)
         {
             if (string.IsNullOrWhiteSpace(id))
                 throw new ArgumentException("Номер накладной не может быть пустым.");
             if (date > DateTime.Now)
                 throw new ArgumentException("Дата поступления не может быть в будущем.");
-
-            Id = id;
-            Date = date;
-        }
-
-        public void AddItem(DeliveryItem item)
-        {
+            if (supplier == null)
+                throw new ArgumentNullException(nameof(supplier));
             if (item == null)
                 throw new ArgumentNullException(nameof(item));
 
-            items.Add(item);
-        }
-
-        public IReadOnlyList<DeliveryItem> GetItems()
-        {
-            return items.AsReadOnly();
+            Id = id;
+            Date = date;
+            Supplier = supplier;
+            Item = item;
         }
 
         public decimal TotalCost
         {
             get
             {
-                return CalculateTotalCost();
+                return Item.TotalPrice;
             }
-        }
-
-
-        private decimal CalculateTotalCost()
-        {
-            decimal total = 0;
-            foreach (var item in items)
-            {
-                total += item.TotalPrice;
-            }
-            return total;
         }
 
         public override string ToString()
         {
-            return $"Накладная №{Id}, Дата: {Date.ToShortDateString()}, Всего позиций: {items.Count}, Общая сумма: {TotalCost:C}";
+            return $"Накладная №{Id}, Дата: {Date.ToShortDateString()}, Поставщик: {Supplier.Name}, Товар: {Item.Medicine.Name}, Количество: {Item.Quantity}, Общая сумма: {TotalCost:C}";
         }
     }
+
 
 }

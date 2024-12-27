@@ -77,9 +77,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Delivery\DelieveryNoteJsonRepository.cs" />
+    <Compile Include="Model\Delivery\IDelieveryNoteRepository.cs" />
     <Compile Include="Model\Medicines\IMedicineRepository.cs" />
     <Compile Include="Model\Medicines\MedicineJsonRepository.cs" />
+    <Compile Include="Presenter\DeliveryNotePresenter.cs" />
     <Compile Include="Presenter\MedicinePresenter.cs" />
+    <Compile Include="View\DelieveryNotesView\AddDelievery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DelieveryNotesView\AddDelievery.Designer.cs">
+      <DependentUpon>AddDelievery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DelieveryNotesView\DeliveryNoteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DelieveryNotesView\DeliveryNoteView.Designer.cs">
+      <DependentUpon>DeliveryNoteView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DelieveryNotesView\IDeliveryNoteView.cs" />
     <Compile Include="View\MainView\IMainView.cs" />
     <Compile Include="View\MainView\MainForm.cs">
       <SubType>Form</SubType>
@@ -88,8 +104,8 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Customer.cs" />
-    <Compile Include="Model\DeliveryItem.cs" />
-    <Compile Include="Model\DeliveryNote.cs" />
+    <Compile Include="Model\Delivery\DeliveryItem.cs" />
+    <Compile Include="Model\Delivery\DeliveryNote.cs" />
     <Compile Include="Model\Invoice.cs" />
     <Compile Include="Model\Suppliers\ISupplierRepository.cs" />
     <Compile Include="Model\Medicines\Manufacture.cs" />
@@ -121,6 +137,12 @@
     <Compile Include="View\Suppliers\SupplierForm.Designer.cs">
       <DependentUpon>SupplierForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\DelieveryNotesView\AddDelievery.resx">
+      <DependentUpon>AddDelievery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DelieveryNotesView\DeliveryNoteView.resx">
+      <DependentUpon>DeliveryNoteView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\MainView\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

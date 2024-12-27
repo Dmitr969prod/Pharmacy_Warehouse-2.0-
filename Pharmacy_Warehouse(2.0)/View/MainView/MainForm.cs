@@ -14,6 +14,7 @@ namespace Pharmacy_Warehouse_2._0_
     {
         public event EventHandler LoadSupplierForm;
         public event EventHandler LoadMedicineForm;
+        public event EventHandler LoadDeliveryNoteForm;
         public MainForm()
         {
             InitializeComponent();
@@ -27,6 +28,11 @@ namespace Pharmacy_Warehouse_2._0_
         private void MedicineButton_Click(object sender, EventArgs e)
         {
             LoadMedicineForm?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void DeliverButton_Click(object sender, EventArgs e)
+        {
+            LoadDeliveryNoteForm?.Invoke(this, EventArgs.Empty);
         }
     }
 }

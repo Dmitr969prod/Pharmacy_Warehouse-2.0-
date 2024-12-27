@@ -23,9 +23,6 @@ namespace Pharmacy_Warehouse_2._0_.View.MedicinesView
         Manufacturer GetManufactureData();
         //void SetPackingInfo(Packaging packaging);
         Packaging GetPackagingInfo();
-
-
-
         void Show();
         void Hide();
         Presenter.MedicinePresenter Presenter { set; }

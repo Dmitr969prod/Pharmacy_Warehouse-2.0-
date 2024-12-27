@@ -10,6 +10,7 @@ namespace Pharmacy_Warehouse_2._0_
     {
         event EventHandler LoadSupplierForm;
         event EventHandler LoadMedicineForm;
+        event EventHandler LoadDeliveryNoteForm;
         void Hide();
         void Show();
     }
