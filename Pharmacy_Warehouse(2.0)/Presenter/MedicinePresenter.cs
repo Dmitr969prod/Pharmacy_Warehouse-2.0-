@@ -48,11 +48,12 @@ namespace Pharmacy_Warehouse_2._0_.Presenter
             _medicineView.ManufactureDate = medicine.ManufactureDate;
             _medicineView.ExpirationDate = medicine.ExpirationDate;
             _medicineView.RegNumber = medicine.RegNumber;
-            _medicineView.SetManufactureData(medicine.Producer);
-            
-            _medicineView.SetPackingInfo(medicine.PackagingInfo);
-            
-            
+            /*_medicineView.Producer = medicine.Producer?.ToString();
+
+            _medicineView.PackagingInfo = medicine.PackagingInfo?.ToString();*/
+
+
+
         }
         public void AddSupplier()
         {

@@ -63,7 +63,7 @@
             this.DeliverButton.Name = "DeliverButton";
             this.DeliverButton.Size = new System.Drawing.Size(301, 111);
             this.DeliverButton.TabIndex = 9;
-            this.DeliverButton.Text = "Поставки\r\n";
+            this.DeliverButton.Text = "Новая поставка";
             this.DeliverButton.UseVisualStyleBackColor = true;
             // 
             // MedicineButton

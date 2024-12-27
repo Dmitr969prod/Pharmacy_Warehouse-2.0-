@@ -59,14 +59,23 @@ namespace Pharmacy_Warehouse_2._0_.View.MedicinesView
             get { return this.RegNumberBox.Text; }
             set { this.RegNumberBox.Text = value; }
         }
-
-        public void SetManufactureData(Manufacturer manufacture)
+        /*public Manufacturer Producer
+        {
+            get { return GetManufactureData(); }
+            set { SetManufactureData(value); }
+        }
+        public Packaging PackagingInfo
+        {
+            get { return GetPackagingInfo(); }
+            set { SetPackingInfo(value); }
+        }*/
+       /* public void SetManufactureData(Manufacturer manufacture)
         {
             this.NameManufactureBox.Text = manufacture.Name;
             this.AddressManufactureBox.Text = manufacture.Address;
             this.PhoneNumberBox.Text = manufacture.ContactInfo;
-        }
-        
+        }*/
+
         public Manufacturer GetManufactureData()
         {
             return new Manufacturer(
@@ -76,12 +85,12 @@ namespace Pharmacy_Warehouse_2._0_.View.MedicinesView
                 );
         }
 
-        public void SetPackingInfo(Packaging packaging)
+       /* public void SetPackingInfo(Packaging packaging)
         {
             this.TypeBox.Text = packaging.Type;
             this.MaterialBox.Text = packaging.Material;
             this.QuantityBox.Text = packaging.Quantity.ToString();
-        }
+        }*/
 
         public Packaging GetPackagingInfo()
         {
@@ -112,6 +121,18 @@ namespace Pharmacy_Warehouse_2._0_.View.MedicinesView
         private void EditSaveButton_Click(object sender, EventArgs e)
         {
             this.NameManufactureBox.ReadOnly = _isEditMode;
+            this.AddressManufactureBox.ReadOnly= _isEditMode;
+            this.PhoneNumberBox.ReadOnly= _isEditMode;
+
+            this.TypeBox.ReadOnly= _isEditMode;
+            this.MaterialBox.ReadOnly= _isEditMode;
+            this.QuantityBox.ReadOnly= _isEditMode;
+
+            this.NameMedicineBox.ReadOnly= _isEditMode;
+            this.CategoryMedicineBox.ReadOnly = _isEditMode;
+            this.ManufactureDateBox.ReadOnly = _isEditMode;
+            this.ExpirationDateBox.ReadOnly = _isEditMode;
+            this.RegNumberBox.ReadOnly = _isEditMode;
             
             _isEditMode = !_isEditMode;
 

@@ -26,7 +26,7 @@ namespace Pharmacy_Warehouse_2._0_.Model.Medicines
 
         public void CreateMedicinesJsonStub()
         {
-            
+            List<Medicine> Medicines = new List<Medicine>();
 
             // Добавление первого лекарства
             Medicine aspirin = new Medicine(
@@ -38,9 +38,11 @@ namespace Pharmacy_Warehouse_2._0_.Model.Medicines
                 producer: new Manufacturer("Фармкомпания", "г. Москва, ул. Аптечная, д. 1", "+7 495 123-45-67"),
                 packaging: new Packaging("Коробка", "Картон", 30)
                 
+                
 
             ) ;
-            medicines.Add(aspirin);
+            
+            Medicines.Add(aspirin);
 
             // Добавление второго лекарства
             Medicine paracetamol = new Medicine(
@@ -53,7 +55,7 @@ namespace Pharmacy_Warehouse_2._0_.Model.Medicines
                 packaging: new Packaging("Блистер", "Пластик", 10)
                 
             );
-            medicines.Add(paracetamol);
+            Medicines.Add(paracetamol);
 
             // Добавление третьего лекарства
             Medicine ibuprofen = new Medicine(
@@ -66,9 +68,9 @@ namespace Pharmacy_Warehouse_2._0_.Model.Medicines
                 packaging: new Packaging("Флакон", "Пластик", 50)
                 
             );
-            medicines.Add(ibuprofen);
+            Medicines.Add(ibuprofen);
 
-            SaveMedicineList(medicines);
+            SaveMedicineList(Medicines);
         }
 
         public void SaveMedicineList(List<Medicine> medicines)

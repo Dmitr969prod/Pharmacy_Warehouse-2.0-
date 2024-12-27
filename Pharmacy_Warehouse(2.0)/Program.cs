@@ -32,7 +32,7 @@ namespace Pharmacy_Warehouse_2._0_
             var MainPresenter = new MainPresenter(view, viewSupplier, viewMedicine);
             var presenter = new SuplierPresenter(viewSupplier, repository);
             var medicinePresenter = new MedicinePresenter(viewMedicine, MedicineRepository);
-            Console.WriteLine(Path.GetTempPath());
+            
             Application.Run(view);
         }
     }
