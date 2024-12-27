@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.MedicinesComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.SuppliersComboBox = new System.Windows.Forms.ComboBox();
+            this.CustomersComboBox = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -66,6 +66,7 @@
             this.AddButton.TabIndex = 81;
             this.AddButton.Text = "Создать";
             this.AddButton.UseVisualStyleBackColor = true;
+            
             // 
             // label2
             // 
@@ -75,7 +76,7 @@
             this.label2.Size = new System.Drawing.Size(169, 20);
             this.label2.TabIndex = 80;
             this.label2.Text = "Выберите лекарство";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            
             // 
             // MedicinesComboBox
             // 
@@ -91,19 +92,19 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(63, 141);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 20);
+            this.label1.Size = new System.Drawing.Size(177, 20);
             this.label1.TabIndex = 78;
-            this.label1.Text = "Выберите поставщика";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "Выберите покупателя";
+            
             // 
-            // SuppliersComboBox
+            // CustomersComboBox
             // 
-            this.SuppliersComboBox.FormattingEnabled = true;
-            this.SuppliersComboBox.Location = new System.Drawing.Point(63, 167);
-            this.SuppliersComboBox.Name = "SuppliersComboBox";
-            this.SuppliersComboBox.Size = new System.Drawing.Size(273, 28);
-            this.SuppliersComboBox.TabIndex = 77;
-            this.SuppliersComboBox.SelectedIndexChanged += new System.EventHandler(this.SuppliersComboBox_SelectedIndexChanged);
+            this.CustomersComboBox.FormattingEnabled = true;
+            this.CustomersComboBox.Location = new System.Drawing.Point(63, 167);
+            this.CustomersComboBox.Name = "CustomersComboBox";
+            this.CustomersComboBox.Size = new System.Drawing.Size(273, 28);
+            this.CustomersComboBox.TabIndex = 77;
+            this.CustomersComboBox.SelectedIndexChanged += new System.EventHandler(this.CustomersComboBox_SelectedIndexChanged);
             // 
             // textBox1
             // 
@@ -229,7 +230,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.MedicinesComboBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.SuppliersComboBox);
+            this.Controls.Add(this.CustomersComboBox);
             this.Name = "InvoiceAdd";
             this.Text = "InvoiceAdd";
             this.ResumeLayout(false);
@@ -244,7 +245,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox MedicinesComboBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox SuppliersComboBox;
+        private System.Windows.Forms.ComboBox CustomersComboBox;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

@@ -26,49 +26,28 @@ namespace Pharmacy_Warehouse_2._0_.Model.Medicines
 
         public void CreateMedicinesJsonStub()
         {
-            List<Medicine> Medicines = new List<Medicine>();
+            var producer1 = new Manufacturer("ООО Фарма", "Россия, Москва, ул. Ленина, 1", "+7 800 555-35-35");
+            var producer2 = new Manufacturer("ФармГлобал", "Германия, Берлин, ул. Бранденбург, 20", "+49 30 123456");
+            var producer3 = new Manufacturer("Зеленый Лекарь", "Беларусь, Минск, ул. Советская, 5", "+375 17 1234567");
 
-            // Добавление первого лекарства
-            Medicine aspirin = new Medicine(
-                name: "Аспирин",
-                category: "Противовоспалительные",
-                manufactureDate: new DateTime(2023, 1, 10),
-                expirationDate: new DateTime(2025, 1, 10),
-                regNumber: "RU-456789",
-                producer: new Manufacturer("Фармкомпания", "г. Москва, ул. Аптечная, д. 1", "+7 495 123-45-67"),
-                packaging: new Packaging("Коробка", "Картон", 30)
-                
-                
+           
+            var packaging1 = new Packaging("Блистерная упаковка", "Пластик", 10);
+            var packaging2 = new Packaging("Пластиковая бутылка", "Пластик", 100);
+            var packaging3 = new Packaging("Стеклянный флакон", "Стекло", 50);
 
-            ) ;
-            
-            Medicines.Add(aspirin);
-
-            // Добавление второго лекарства
-            Medicine paracetamol = new Medicine(
-                name: "Парацетамол",
-                category: "Обезболивающие",
-                manufactureDate: new DateTime(2023, 3, 15),
-                expirationDate: new DateTime(2025, 3, 15),
-                regNumber: "RU-123456",
-                producer: new Manufacturer("Фармкомпания 2", "г. Санкт-Петербург, ул. Аптечная, д. 2", "+7 812 555-12-34"),
-                packaging: new Packaging("Блистер", "Пластик", 10)
-                
-            );
-            Medicines.Add(paracetamol);
-
-            // Добавление третьего лекарства
-            Medicine ibuprofen = new Medicine(
-                name: "Ибупрофен",
-                category: "Противовоспалительные",
-                manufactureDate: new DateTime(2023, 5, 20),
-                expirationDate: new DateTime(2025, 5, 20),
-                regNumber: "RU-789101",
-                producer: new Manufacturer("Фармкомпания 3", "г. Казань, ул. Аптечная, д. 3", "+7 843 333-22-11"),
-                packaging: new Packaging("Флакон", "Пластик", 50)
-                
-            );
-            Medicines.Add(ibuprofen);
+            List<Medicine> Medicines = new List<Medicine>
+            {
+                new Medicine("Парацетамол", "Обезболивающее", new DateTime(2023, 1, 15), new DateTime(2025, 1, 15), "1234567890", producer1, packaging1),
+                new Medicine("Аспирин", "Обезболивающее", new DateTime(2022, 6, 1), new DateTime(2024, 6, 1), "2345678901", producer2, packaging2),
+                new Medicine("Ибупрофен", "Противовоспалительное", new DateTime(2023, 3, 20), new DateTime(2025, 3, 20), "3456789012", producer3, packaging3),
+                new Medicine("Лоперамид", "Противодиарейное", new DateTime(2023, 7, 10), new DateTime(2025, 7, 10), "4567890123", producer1, packaging1),
+                new Medicine("Цитрамон", "Обезболивающее", new DateTime(2022, 10, 5), new DateTime(2024, 10, 5), "5678901234", producer2, packaging2),
+                new Medicine("Каламин", "Антисептик", new DateTime(2023, 5, 15), new DateTime(2025, 5, 15), "6789012345", producer3, packaging3),
+                new Medicine("Супрастин", "Антигистаминное", new DateTime(2023, 2, 28), new DateTime(2025, 2, 28), "7890123456", producer1, packaging1),
+                new Medicine("Тамифлю", "Противовирусное", new DateTime(2023, 4, 10), new DateTime(2025, 4, 10), "8901234567", producer2, packaging2),
+                new Medicine("Фервекс", "Простуда", new DateTime(2022, 12, 1), new DateTime(2024, 12, 1), "9012345678", producer3, packaging3),
+                new Medicine("Нурофен", "Обезболивающее", new DateTime(2023, 8, 8), new DateTime(2025, 8, 8), "0123456789", producer1, packaging1)
+            };
 
             SaveMedicineList(Medicines);
         }

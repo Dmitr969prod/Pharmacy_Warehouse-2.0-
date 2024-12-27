@@ -89,15 +89,15 @@ namespace Pharmacy_Warehouse_2._0_.Presenter
             UpdateDeliveryListView();
         }
 
-      /*  public void DeleteDeliveryNote()
+        public void DeleteDeliveryNote()
         {
             if (_deliveryNoteView.SelectedDeliveryNote < 0) return;
 
-            var noteId = _deliveryNoteView.IDeliveryList[_deliveryNoteView.SelectedDeliveryNote];
-            _deliveryNoteRepository.DeleteDeliveryNote(noteId);
+            
+            _deliveryNoteRepository.DeleteDeliveryNote(_deliveryNoteView.SelectedDeliveryNote);
 
             UpdateDeliveryListView();
-        }*/
+        }
     }
 
 

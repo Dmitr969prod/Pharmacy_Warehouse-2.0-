@@ -142,6 +142,11 @@ namespace Pharmacy_Warehouse_2._0_.View.DelieveryNoteView
            AddDelievery addDelievery = new AddDelievery();
             addDelievery.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Presenter.DeleteDeliveryNote();
+        }
     }
 
 }

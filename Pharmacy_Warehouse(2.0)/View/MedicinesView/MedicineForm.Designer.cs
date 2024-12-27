@@ -83,9 +83,9 @@
             this.MedicineListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MedicineListLabel.Location = new System.Drawing.Point(130, 40);
             this.MedicineListLabel.Name = "MedicineListLabel";
-            this.MedicineListLabel.Size = new System.Drawing.Size(449, 37);
+            this.MedicineListLabel.Size = new System.Drawing.Size(275, 37);
             this.MedicineListLabel.TabIndex = 31;
-            this.MedicineListLabel.Text = "Список имеющихся лекарств";
+            this.MedicineListLabel.Text = "Список лекарств";
             // 
             // NameMedicineBox
             // 

@@ -82,6 +82,7 @@
             this.label2.Size = new System.Drawing.Size(169, 20);
             this.label2.TabIndex = 69;
             this.label2.Text = "Выберите лекарство";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // MedicinesComboBox
             // 
@@ -100,6 +101,7 @@
             this.label1.Size = new System.Drawing.Size(181, 20);
             this.label1.TabIndex = 67;
             this.label1.Text = "Выберите поставщика";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // SuppliersComboBox
             // 
