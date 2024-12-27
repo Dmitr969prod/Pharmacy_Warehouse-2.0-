@@ -28,46 +28,46 @@ namespace Pharmacy_Warehouse_2._0_.Model.Delivery
         {
             List<DeliveryNote> deliveryNotes = new List<DeliveryNote>();
 
-            Medicine aspirin = new Medicine(
-                name: "Аспирин",
-                category: "Противовоспалительные",
-                manufactureDate: new DateTime(2023, 1, 10),
-                expirationDate: new DateTime(2025, 1, 10),
-                regNumber: "RU-456789",
-                producer: new Manufacturer("Фармкомпания", "г. Москва", "+7 495 123-45-67"),
-                packaging: new Packaging("Коробка", "Картон", 30)
-            );
+            // Пример поставщиков
+            Supplier supplier1 = new Supplier("ООО ПоставкиМед", "Россия, Москва, ул. Маяковского, 10", "+7 495 111-22-33", "Сбербанк", "40817810000100000001", "7721234567");
+            Supplier supplier2 = new Supplier("МедПартнер", "Россия, Санкт-Петербург, ул. Лермонтова, 3", "+7 812 234-56-78", "Тинькофф", "40802810101010101010", "7845109876");
+            Supplier supplier3 = new Supplier("ФармаГлобал", "Россия, Казань, ул. Победы, 25", "+7 843 345-67-89", "ВТБ", "40702810501050505050", "7753001234");
+
+            // Пример DeliveryItem (из предыдущего списка)
+            List<DeliveryItem> deliveryItems = new List<DeliveryItem>
+{
+            new DeliveryItem(new Medicine("Аспирин", "Противовоспалительные", new DateTime(2023, 1, 10), new DateTime(2025, 1, 10), "RU-456789",
+                new Manufacturer("Фармкомпания", "г. Москва", "+7 495 123-45-67"), new Packaging("Коробка", "Картон", 30)), 50.00m, 10),
+            new DeliveryItem(new Medicine("Ибупрофен", "Обезболивающие", new DateTime(2022, 5, 1), new DateTime(2024, 5, 1), "RU-987654",
+                new Manufacturer("Фармкомпания 2", "г. Санкт-Петербург", "+7 812 555-12-34"), new Packaging("Блистер", "Пластик", 20)), 30.00m, 15),
+            // Повторяем для еще 8 элементов
+            new DeliveryItem(new Medicine("Аспирин", "Противовоспалительные", new DateTime(2023, 1, 10), new DateTime(2025, 1, 10), "RU-456789",
+                new Manufacturer("Фармкомпания", "г. Москва", "+7 495 123-45-67"), new Packaging("Коробка", "Картон", 30)), 45.50m, 8),
+            new DeliveryItem(new Medicine("Ибупрофен", "Обезболивающие", new DateTime(2022, 5, 1), new DateTime(2024, 5, 1), "RU-987654",
+                new Manufacturer("Фармкомпания 2", "г. Санкт-Петербург", "+7 812 555-12-34"), new Packaging("Блистер", "Пластик", 20)), 32.00m, 12)
+        };
+
+            // Генерация DeliveryNote
+            Random random = new Random();
+
+            for (int i = 1; i <= 10; i++)
+            {
+                var supplier = i % 3 == 0 ? supplier3 : i % 2 == 0 ? supplier2 : supplier1;
+                var item = deliveryItems[random.Next(deliveryItems.Count)];
+                var date = DateTime.Now.AddDays(-random.Next(1, 30)); // Генерация случайной даты в пределах последнего месяца
+
+                DeliveryNote deliveryNote = new DeliveryNote(
+                    id: $"DN-{i:D3}",
+                    date: date,
+                    supplier: supplier,
+                    item: item
+                );
+
+                deliveryNotes.Add(deliveryNote);
+            }
+
 
             
-            DeliveryNote note1 = new DeliveryNote(
-                id: "DN-001",
-                date: new DateTime(2023, 1, 10),
-                supplier: new Supplier("Поставщик 1", "г. Москва, ул. Складская, д. 1", "+7 495 111-22-33"),
-                item: new DeliveryItem(aspirin, pricePerUnit: 50.00m, quantity: 30)
-            );
-
-            deliveryNotes.Add(note1);
-
-            
-            Medicine paracetamol = new Medicine(
-                name: "Парацетамол",
-                category: "Обезболивающие",
-                manufactureDate: new DateTime(2023, 1, 15),
-                expirationDate: new DateTime(2025, 1, 15),
-                regNumber: "RU-123456",
-                producer: new Manufacturer("Фармкомпания 2", "г. Санкт-Петербург", "+7 812 555-12-34"),
-                packaging: new Packaging("Блистер", "Пластик", 10)
-            );
-
-            
-            DeliveryNote note2 = new DeliveryNote(
-                id: "DN-002",
-                date: new DateTime(2023, 2, 15),
-                supplier: new Supplier("Поставщик 2", "г. Санкт-Петербург, ул. Складская, д. 2", "+7 812 444-55-66"),
-                item: new DeliveryItem(paracetamol, pricePerUnit: 25.00m, quantity: 20)
-            );
-
-            deliveryNotes.Add(note2);
 
             SaveDeliveryNoteList(deliveryNotes);
         }
