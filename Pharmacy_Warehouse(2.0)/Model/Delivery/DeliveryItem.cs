@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Pharmacy_Warehouse
 {
@@ -32,11 +29,6 @@ namespace Pharmacy_Warehouse
             {
                 return PricePerUnit * Quantity;
             }
-        }
-
-        public override string ToString()
-        {
-            return $"{Medicine.Name}, Цена: {PricePerUnit:C}, Кол-во: {Quantity}, Всего: {TotalPrice:C}";
         }
     }
 }

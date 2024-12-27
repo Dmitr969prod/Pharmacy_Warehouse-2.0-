@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Pharmacy_Warehouse
 {
@@ -25,10 +21,6 @@ namespace Pharmacy_Warehouse
             Quantity = quantity;
         }
 
-        public override string ToString()
-        {
-            return $"{Type} из {Material}, {Quantity} шт.";
-        }
     }
 
 }

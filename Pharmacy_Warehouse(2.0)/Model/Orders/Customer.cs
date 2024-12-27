@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Pharmacy_Warehouse
 {
-    using System;
-    using System.Collections.Generic;
-
+ 
     public class Customer
     {
         public string Name { get; private set; }
@@ -33,14 +27,7 @@ namespace Pharmacy_Warehouse
             TaxId = taxId;
         }
 
-        public override string ToString()
-        {
-            return $"{Name}, Адрес: {Address}, Телефон: {Phone}, ИНН: {TaxId}";
-        }
+
     }
-
-  
-
-
 
 }

@@ -123,7 +123,7 @@
             this.label2.Size = new System.Drawing.Size(221, 20);
             this.label2.TabIndex = 64;
             this.label2.Text = "Дата поступления на склад";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            
             // 
             // label3
             // 
@@ -133,7 +133,7 @@
             this.label3.Size = new System.Drawing.Size(161, 20);
             this.label3.TabIndex = 66;
             this.label3.Text = "Поступивший товар";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            
             // 
             // MedicineNameBox
             // 
@@ -143,7 +143,7 @@
             this.MedicineNameBox.ReadOnly = true;
             this.MedicineNameBox.Size = new System.Drawing.Size(347, 41);
             this.MedicineNameBox.TabIndex = 65;
-            this.MedicineNameBox.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            
             // 
             // label4
             // 

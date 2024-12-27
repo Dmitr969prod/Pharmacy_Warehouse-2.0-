@@ -2,14 +2,7 @@
 using Pharmacy_Warehouse_2._0_.Presenter;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 
 namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
 {

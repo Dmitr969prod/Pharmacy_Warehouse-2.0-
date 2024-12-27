@@ -143,12 +143,6 @@
       <DependentUpon>MedicineForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\SuppliersView\ISupplierView.cs" />
-    <Compile Include="View\SuppliersView\SupplierAdd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\SuppliersView\SupplierAdd.Designer.cs">
-      <DependentUpon>SupplierAdd.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\SuppliersView\SupplierForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,9 +177,6 @@
       <DependentUpon>MedicineForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\OrderForm.resx" />
-    <EmbeddedResource Include="View\SuppliersView\SupplierAdd.resx">
-      <DependentUpon>SupplierAdd.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\SuppliersView\SupplierForm.resx">
       <DependentUpon>SupplierForm.cs</DependentUpon>
     </EmbeddedResource>

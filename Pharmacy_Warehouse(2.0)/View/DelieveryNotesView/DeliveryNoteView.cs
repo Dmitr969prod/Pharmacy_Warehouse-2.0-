@@ -2,12 +2,6 @@
 using Pharmacy_Warehouse_2._0_.View.DelieveryNotesView;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pharmacy_Warehouse_2._0_.View.DelieveryNoteView
@@ -31,7 +25,7 @@ namespace Pharmacy_Warehouse_2._0_.View.DelieveryNoteView
 
         public int SelectedDeliveryNote
         {
-            get { return this.DeliveryNotesListBox.SelectedIndex; }
+            get {  return this.DeliveryNotesListBox.SelectedIndex; }
             set { this.DeliveryNotesListBox.SelectedIndex = value; }
         }
 
@@ -53,8 +47,8 @@ namespace Pharmacy_Warehouse_2._0_.View.DelieveryNoteView
             {
                 return new Supplier(
                     name: this.SupplierNameBox.Text,
-                    address: null, // Адрес не нужен в форме.
-                    phone: null // Телефон не нужен в форме.
+                    address: null, 
+                    phone: null 
                 );
             }
             set
@@ -106,19 +100,6 @@ namespace Pharmacy_Warehouse_2._0_.View.DelieveryNoteView
             Presenter.AddDeliveryNote();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void ComeBackButton_Click_1(object sender, EventArgs e)
         {

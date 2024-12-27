@@ -1,9 +1,6 @@
 ﻿using Pharmacy_Warehouse;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
 {
@@ -14,7 +11,6 @@ namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
         int SelectedInvoiceIndex { get; set; }
         string Id { get; set; }
         DateTime Date { get; set; }
-        /*Customer Customer { get; set; }*/
         string SellerName { get; set; }
         DeliveryItem DeliveryItem { get; set; }
         

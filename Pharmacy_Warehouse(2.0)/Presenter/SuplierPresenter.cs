@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WarehouseClient.View.Suppliers;
 using Pharmacy_Warehouse.Model.Suppliers;
 using Pharmacy_Warehouse;
-using Pharmacy_Warehouse_2._0_;
 
 
 namespace WarehouseClient.Presenter
@@ -58,16 +54,5 @@ namespace WarehouseClient.Presenter
             _supplierRepository.AddSupplier( supplier);
             UpdateSupplierListView();
         }
-
-        public void SaveSupplier()
-        {
-            Supplier supplier = new Supplier(_supplierView.Name, _supplierView.Address, _supplierView.PhoneNumber,
-                _supplierView.BankName, _supplierView.AccountNumber, _supplierView.TaxID);
-            _supplierRepository.SaveSupplier(_supplierView.SelectedSupplier, supplier);
-            UpdateSupplierListView();
-        }
-
-
-
     }
 }

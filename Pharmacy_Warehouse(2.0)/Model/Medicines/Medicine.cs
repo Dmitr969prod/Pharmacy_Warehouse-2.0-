@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Pharmacy_Warehouse
 {
@@ -33,32 +29,7 @@ namespace Pharmacy_Warehouse
             
         }
 
-        public bool IsExpired()
-        {
-            return DateTime.Now > ExpirationDate;
-        }
-
-
-        public string GetShortInfo()
-        {
-            return $"{Name} - Срок годности до {ExpirationDate.ToShortDateString()}";
-        }
-
-
-
-        public int DaysUntilExpiration()
-        {
-            return (ExpirationDate - DateTime.Now).Days;
-        }
-
-
-
-        public override string ToString()
-        {
-            return $"Лекарство: {Name}, Категория: {Category}, Производитель: {Producer}, Упаковка: {PackagingInfo}, " +
-                   $"Дата производства: {ManufactureDate.ToShortDateString()}, Срок годности: {ExpirationDate.ToShortDateString()}, " +
-                   $"Рег. номер: {RegNumber}";
-        }
+      
     }
 
 }

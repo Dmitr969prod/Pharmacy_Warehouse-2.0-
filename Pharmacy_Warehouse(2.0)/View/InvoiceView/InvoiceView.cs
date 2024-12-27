@@ -1,12 +1,6 @@
 ﻿using Pharmacy_Warehouse;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
@@ -116,20 +110,6 @@ namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
 
         public Presenter.InvoicePresenter Presenter { get; set; }
 
-       
-
-        private void DeleteButton_Click(object sender, EventArgs e)
-        {
-            Presenter.DeleteInvoice();
-        }
-
-        private void InvoiceListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-          
-            Presenter.UpdateInvoiceView(InvoiceListBox.SelectedIndex);
-            
-        }
-
         private void InvoiceListBox_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             Presenter.UpdateInvoiceView(InvoiceListBox.SelectedIndex);
@@ -150,14 +130,6 @@ namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
         {
             Presenter.DeleteInvoice();
         }
-
-
-
-        /*private void AddInvoiceButton_Click(object sender, EventArgs e)
-        {
-            AddInvoiceForm addInvoiceForm = new AddInvoiceForm();
-            addInvoiceForm.Show();
-        }*/
     }
 
 }

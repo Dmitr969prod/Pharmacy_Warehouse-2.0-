@@ -2,10 +2,6 @@
 using Pharmacy_Warehouse_2._0_.View.InvoiceView;
 using Pharmacy_Warehouse_2._0_.View.MedicinesView;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WarehouseClient.View.Suppliers;
 
 namespace Pharmacy_Warehouse_2._0_.Presenter

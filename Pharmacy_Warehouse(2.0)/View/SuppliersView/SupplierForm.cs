@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WarehouseClient.View.Suppliers;
 using WarehouseClient.Presenter;
@@ -76,31 +70,6 @@ namespace Pharmacy_Warehouse_2._0_.View.Suppliers
         private void SuppliersListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Presenter.UpdateSupplierView(SuppliersListBox.SelectedIndex);
-        }
-
-       /* private void EditSaveButton_Click(object sender, EventArgs e)
-        {
-            this.NameBox.ReadOnly = _isEditMode;
-            this.AddressBox.ReadOnly = _isEditMode;
-            this.PhoneNumberBox.ReadOnly = _isEditMode;
-            this.BankNameBox.ReadOnly = _isEditMode;
-            this.AccountNumberBox.ReadOnly = _isEditMode;
-            this.TaxIdBox.ReadOnly = _isEditMode;
-
-            _isEditMode = !_isEditMode;
-
-            this.EditSaveButton.Text = _isEditMode ? "Save" : "Edit";
-
-            if (!_isEditMode)
-            {
-                Presenter.SaveSupplier();
-            }
-        }*/
-
-        private void AddButton_Click(object sender, EventArgs e)
-        {
-            
-            Presenter.AddSupplier();
         }
 
         private void ComeBackButton_Click(object sender, EventArgs e)

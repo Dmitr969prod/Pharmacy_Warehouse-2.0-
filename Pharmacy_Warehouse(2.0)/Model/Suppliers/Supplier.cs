@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Pharmacy_Warehouse
 {
-    
+
 
     public class Supplier
     {
@@ -45,58 +42,6 @@ namespace Pharmacy_Warehouse
         }
 
         
-        public void UpdateContactInfo(string newAddress, string newPhone)
-        {
-            if (string.IsNullOrWhiteSpace(newAddress))
-                throw new ArgumentException("Адрес не может быть пустым.");
-            if (string.IsNullOrWhiteSpace(newPhone))
-                throw new ArgumentException("Телефон не может быть пустым.");
-
-            Address = newAddress;
-            Phone = newPhone;
-        }
-
-        
-        public void UpdateBankInfo(string newBankName, string newAccountNumber)
-        {
-            if (string.IsNullOrWhiteSpace(newBankName))
-                throw new ArgumentException("Название банка не может быть пустым.");
-            if (string.IsNullOrWhiteSpace(newAccountNumber))
-                throw new ArgumentException("Номер расчетного счета не может быть пустым.");
-
-            BankName = newBankName;
-            AccountNumber = newAccountNumber;
-        }
-
-        
-        public List<Medicine> GetSuppliedMedicines()
-        {
-            return new List<Medicine>(suppliedMedicines);
-        }
-
-        
-        public void AddMedicine(Medicine medicine)
-        {
-            if (medicine == null)
-                throw new ArgumentNullException(nameof(medicine));
-
-            if (!suppliedMedicines.Contains(medicine))
-                suppliedMedicines.Add(medicine);
-        }
-
-       
-        public void RemoveMedicine(Medicine medicine)
-        {
-            if (medicine == null)
-                throw new ArgumentNullException(nameof(medicine));
-
-            suppliedMedicines.Remove(medicine);
-        }
-
-        public override string ToString()
-        {
-            return $"{Name}, Адрес: {Address}, Телефон: {Phone}, Банк: {BankName}, Счет: {AccountNumber}, ИНН: {TaxId}";
-        }
     }
 
 }

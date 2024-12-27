@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Pharmacy_Warehouse
 {
-    using System;
-    using System.Collections.Generic;
-
-
-
     public class DeliveryNote
     {
         public string Id { get; private set; }
@@ -42,12 +33,6 @@ namespace Pharmacy_Warehouse
                 return Item.TotalPrice;
             }
         }
-
-        public override string ToString()
-        {
-            return $"Накладная №{Id}, Дата: {Date.ToShortDateString()}, Поставщик: {Supplier.Name}, Товар: {Item.Medicine.Name}, Количество: {Item.Quantity}, Общая сумма: {TotalCost:C}";
-        }
     }
-
 
 }

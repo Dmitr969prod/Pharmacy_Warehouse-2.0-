@@ -1,12 +1,6 @@
 ﻿using Pharmacy_Warehouse;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pharmacy_Warehouse_2._0_.View.MedicinesView
@@ -115,31 +109,5 @@ namespace Pharmacy_Warehouse_2._0_.View.MedicinesView
         {
             LoadMainForm?.Invoke(this, EventArgs.Empty);
         }
-
-        /*private void EditSaveButton_Click(object sender, EventArgs e)
-        {
-            this.NameManufactureBox.ReadOnly = _isEditMode;
-            this.AddressManufactureBox.ReadOnly= _isEditMode;
-            this.PhoneNumberBox.ReadOnly= _isEditMode;
-
-            this.TypeBox.ReadOnly= _isEditMode;
-            this.MaterialBox.ReadOnly= _isEditMode;
-            this.QuantityBox.ReadOnly= _isEditMode;
-
-            this.NameMedicineBox.ReadOnly= _isEditMode;
-            this.CategoryMedicineBox.ReadOnly = _isEditMode;
-            this.ManufactureDateBox.ReadOnly = _isEditMode;
-            this.ExpirationDateBox.ReadOnly = _isEditMode;
-            this.RegNumberBox.ReadOnly = _isEditMode;
-            
-            _isEditMode = !_isEditMode;
-
-            this.EditSaveButton.Text = _isEditMode ? "Save" : "Edit";
-
-            if (!_isEditMode)
-            {
-                Presenter.SaveMedicine();
-            }
-        }*/
     }
 }

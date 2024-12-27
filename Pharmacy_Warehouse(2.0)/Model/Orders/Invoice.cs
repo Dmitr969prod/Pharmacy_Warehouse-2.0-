@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Pharmacy_Warehouse
 {
@@ -33,30 +29,5 @@ namespace Pharmacy_Warehouse
             DeliveryItem = deliveryItem;
         }
 
-       
-
-       /* public decimal TotalCost
-        {
-            get
-            {
-                return CalculateTotalCost();
-            }
-        }
-
-
-        private decimal CalculateTotalCost()
-        {
-            decimal total = 0;
-            foreach (var item in items)
-            {
-                total += item.TotalPrice;
-            }
-            return total;
-        }*/
-
-        /*public override string ToString()
-        {
-            return $"Счет-фактура №{Id}, Дата: {Date.ToShortDateString()}, Покупатель: {Customer.Name}, Продавец: {SellerName}, Сумма: {TotalCost:C}";
-        }*/
     }
 }
