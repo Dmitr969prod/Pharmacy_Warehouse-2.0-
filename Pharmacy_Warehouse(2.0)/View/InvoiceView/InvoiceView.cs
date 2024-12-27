@@ -89,8 +89,8 @@ namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
                 return new DeliveryItem(
                     new Medicine(
                         name: this.MedicineName,
-                        category: null, // Категория не нужна в форме.
-                        manufactureDate: DateTime.MinValue, // Даты не нужны в форме.
+                        category: null, 
+                        manufactureDate: DateTime.MinValue, 
                         expirationDate: DateTime.MinValue,
                         regNumber: null,
                         producer: null,
@@ -129,15 +129,14 @@ namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
 
         private void InvoiceListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (InvoiceListBox.SelectedIndex >= 0)
-            {
-                Presenter.UpdateInvoiceView(InvoiceListBox.SelectedIndex);
-            }
+          
+            Presenter.UpdateInvoiceView(InvoiceListBox.SelectedIndex);
+            
         }
 
         private void InvoiceListBox_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-
+            Presenter.UpdateInvoiceView(InvoiceListBox.SelectedIndex);
         }
 
         private void ComeBackButton_Click_1(object sender, EventArgs e)
@@ -147,7 +146,7 @@ namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
 
         private void button2_Click(object sender, EventArgs e)
         {
-            InvoiceAdd invoiceAdd = new InvoiceAdd();
+            InvoiceAdd invoiceAdd = new InvoiceAdd(Presenter);
             invoiceAdd.Show();
         }
 

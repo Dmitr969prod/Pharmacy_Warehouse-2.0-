@@ -32,13 +32,13 @@ namespace Pharmacy_Warehouse_2._0_
             var viewMedicine = new MedicineForm();
             var viewDeliveryNote = new DeliveryNoteView();
             var viewInvoice = new InvoiceView();
-            var viewInvoiceAdd = new InvoiceAdd();
+            
             var MedicineRepository = new MedicineJsonRepository("medicine.json");
             var SupplierRepository = new SupplierJsonRepository("supplier.json");
             var DeliveryNoteRepository = new DeliveryNoteJsonRepository("delivery.json");
             var InvoiceJsonRepository = new InvoiceJsonRepository("invoice.json");
 
-            var invoicePresenter = new InvoicePresenter(viewInvoice, InvoiceJsonRepository, viewInvoiceAdd);
+            var invoicePresenter = new InvoicePresenter(viewInvoice, InvoiceJsonRepository);
             var MainPresenter = new MainPresenter(view, viewSupplier, viewMedicine, viewDeliveryNote, viewInvoice);
             var presenter = new SuplierPresenter(viewSupplier, SupplierRepository);
             var DeliveryNotePresenter = new DeliveryNotePresenter(viewDeliveryNote, DeliveryNoteRepository);

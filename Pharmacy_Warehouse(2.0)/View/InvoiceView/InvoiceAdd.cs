@@ -1,4 +1,5 @@
 ﻿using Pharmacy_Warehouse;
+using Pharmacy_Warehouse_2._0_.Presenter;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,14 +9,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
 {
     public partial class InvoiceAdd : Form, IInvoiceAddForm
     {
-        public InvoiceAdd()
+        public InvoiceAdd(InvoicePresenter Presenter)
         {
             InitializeComponent();
+            presenter = Presenter;
             List<Customer> customers = new List<Customer>
             {
                 new Customer("ООО Озерки", "Москва, ул. Ленина, 1", "+7 900 123-45-67", "123456789012"),
@@ -63,37 +66,44 @@ namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
         public string Id
         {
             get { return this.ID.Text; }
+            set {  this.ID.Text = value; }
         }
 
-        /*public Customer Customer
+        public Customer Customer
         {
-            get { return (Customer)CustomersComboBox.SelectedItem;}
+            get { return (Customer)this.CustomersComboBox.SelectedItem; }
+            set { this.CustomersComboBox.SelectedItem = value;}
         }
 
         public Medicine Medicine
         {
-            get {return (Medicine)MedicinesComboBox.SelectedItem;}
-        }*/
+            get { return (Medicine)this.MedicinesComboBox.SelectedItem; }
+            set { this.MedicinesComboBox.SelectedItem=value; }
+        }
 
         public decimal PricePerUnit
         {
             get { return decimal.Parse(this.PriceBox.Text); }
+            set { this.PriceBox.Text = value.ToString(); }
         }
 
         public int Quantity
         {
             get { return int.Parse(this.CountBox.Text);}
+            set { this.CountBox.Text = value.ToString(); }
         }
         public string SellerName
         {
             get { return this.SellerNameBox.Text; }
+            set { this.SellerNameBox.Text = value; }
         }
         public DateTime date
         {
             get { return DateTime.Parse(this.DateBox.Text);}
+            set { this.DateBox.Text = value.ToString(); }   
         }
 
-        public Presenter.InvoicePresenter presenter { get; set; }
+        
 
         private void MedicinesComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -117,7 +127,9 @@ namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
 
         private void AddButton_Click(object sender, EventArgs e)
         {
+            presenter.SetAdderView(this);
             presenter.AddInvoice();
         }
+        public Presenter.InvoicePresenter presenter { private get; set; }
     }
 }

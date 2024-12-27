@@ -1,4 +1,5 @@
 ﻿using Pharmacy_Warehouse;
+using Pharmacy_Warehouse_2._0_.Presenter;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,12 +12,12 @@ using System.Windows.Forms;
 
 namespace Pharmacy_Warehouse_2._0_.View.DelieveryNotesView
 {
-    public partial class AddDelievery : Form
+    public partial class AddDelievery : Form, IAddDelivery
     {
-        public AddDelievery()
+        public AddDelievery(DeliveryNotePresenter Presenter)
         {
             InitializeComponent();
-
+            presenter = Presenter; 
             List<Supplier> suppliers = new List<Supplier>
             {
                 new Supplier("ООО ПоставкиМед", "Россия, Москва, ул. Маяковского, 10", "+7 495 111-22-33", "Сбербанк", "40817810000100000001", "7721234567"),
@@ -60,6 +61,39 @@ namespace Pharmacy_Warehouse_2._0_.View.DelieveryNotesView
             MedicinesComboBox.DataSource = Medicines;
             MedicinesComboBox.DisplayMember = "Name";
         }
+        public Supplier supplier
+        {
+            get { return (Supplier)this.SuppliersComboBox.SelectedItem; }
+            set { this.SuppliersComboBox.SelectedItem = value; }
+        }
+
+        public Medicine medicine
+        {
+            get { return (Medicine)this.MedicinesComboBox.SelectedItem;}
+            set { this.SuppliersComboBox.SelectedItem = value;}
+        }
+
+        public string Id
+        {
+            get { return this.IdBox.Text; }
+            set { this.IdBox.Text = value; }
+        }
+        public DateTime date
+        {
+            get { return DateTime.Parse(this.DateBox.Text); }
+            set { this.DateBox.Text = value.ToString(); }
+        }
+        public decimal price
+        {
+            get { return decimal.Parse(this.PriceBox.Text); }
+            set { this.PriceBox.Text = value.ToString(); }
+        }
+
+        public int count
+        {
+            get { return int.Parse(this.CountBox.Text); }
+            set { this.CountBox.Text = value.ToString();}
+        }
 
         private void ComeBackButton_Click(object sender, EventArgs e)
         {
@@ -68,7 +102,8 @@ namespace Pharmacy_Warehouse_2._0_.View.DelieveryNotesView
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-
+            presenter.SetAdderView(this);
+            presenter.AddDeliveryNote();
         }
         
         
@@ -84,14 +119,6 @@ namespace Pharmacy_Warehouse_2._0_.View.DelieveryNotesView
             
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+        public Presenter.DeliveryNotePresenter presenter { private get; set; }
     }
 }

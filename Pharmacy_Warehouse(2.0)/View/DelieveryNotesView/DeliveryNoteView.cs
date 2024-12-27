@@ -135,7 +135,7 @@ namespace Pharmacy_Warehouse_2._0_.View.DelieveryNoteView
 
         private void button2_Click(object sender, EventArgs e)
         {
-           AddDelievery addDelievery = new AddDelievery();
+           AddDelievery addDelievery = new AddDelievery(Presenter);
             addDelievery.Show();
         }
 

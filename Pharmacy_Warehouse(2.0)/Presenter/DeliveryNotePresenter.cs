@@ -13,6 +13,7 @@ namespace Pharmacy_Warehouse_2._0_.Presenter
     {
         private readonly IDeliveryNoteView _deliveryNoteView;
         private readonly IDeliveryNoteRepository _deliveryNoteRepository;
+        private IAddDelivery _addDelivery;
 
         public DeliveryNotePresenter(IDeliveryNoteView deliveryNoteView, IDeliveryNoteRepository deliveryNoteRepository)
         {
@@ -28,6 +29,11 @@ namespace Pharmacy_Warehouse_2._0_.Presenter
         private void OnLoadMainForm(object sender, EventArgs e)
         {
             _deliveryNoteView.Hide();
+        }
+        public void SetAdderView(IAddDelivery adderView) 
+        {
+            _addDelivery = adderView;
+            adderView.presenter = this;
         }
 
         private void UpdateDeliveryListView()
@@ -75,13 +81,13 @@ namespace Pharmacy_Warehouse_2._0_.Presenter
         public void AddDeliveryNote()
         {
             var newNote = new DeliveryNote(
-                Guid.NewGuid().ToString(),
-                DateTime.Now,
-                new Supplier("Новый поставщик", "Адрес", "Телефон"),
+                _addDelivery.Id,
+                _addDelivery.date,
+                _addDelivery.supplier,
                 new DeliveryItem(
-                    new Medicine("Новое лекарство", "Категория", DateTime.Now, DateTime.Now.AddYears(2), "РегНомер", null, null),
-                    0,
-                    0
+                    _addDelivery.medicine,
+                    _addDelivery.price,
+                    _addDelivery.count
                 )
             );
 

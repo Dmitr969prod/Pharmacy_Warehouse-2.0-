@@ -13,14 +13,12 @@ namespace Pharmacy_Warehouse_2._0_.Presenter
     {
         private readonly IInvoiceView _invoiceView;
         private readonly IInvoiceRepository _invoiceRepository;
-        private readonly IInvoiceAddForm _invoiceAdd;
+        private IInvoiceAddForm _invoiceAdd;
 
-        public InvoicePresenter(IInvoiceView invoiceView, IInvoiceRepository invoiceRepository, IInvoiceAddForm invoiceAdd)
+        public InvoicePresenter(IInvoiceView invoiceView, IInvoiceRepository invoiceRepository)
         {
             _invoiceRepository = invoiceRepository;
             _invoiceView = invoiceView;
-            _invoiceAdd = invoiceAdd;
-            _invoiceAdd.presenter = this;
             _invoiceView.Presenter = this;
 
             _invoiceView.LoadMainForm += OnLoadMainForm;
@@ -31,6 +29,12 @@ namespace Pharmacy_Warehouse_2._0_.Presenter
         private void OnLoadMainForm(object sender, EventArgs e)
         {
             _invoiceView.Hide();
+        }
+        public void SetAdderView(IInvoiceAddForm adderView) 
+        {
+            _invoiceAdd = adderView; 
+            adderView.presenter = this;
+            
         }
 
         private void UpdateInvoiceListView()

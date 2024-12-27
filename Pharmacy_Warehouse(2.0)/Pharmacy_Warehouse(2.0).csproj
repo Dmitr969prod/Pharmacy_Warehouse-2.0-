@@ -98,6 +98,7 @@
     <Compile Include="View\DelieveryNotesView\DeliveryNoteView.Designer.cs">
       <DependentUpon>DeliveryNoteView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DelieveryNotesView\IAddDelivery.cs" />
     <Compile Include="View\DelieveryNotesView\IDeliveryNoteView.cs" />
     <Compile Include="View\InvoiceView\IInvoiceAddForm.cs" />
     <Compile Include="View\InvoiceView\IInvoiceView.cs" />

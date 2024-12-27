@@ -54,8 +54,6 @@ namespace Pharmacy_Warehouse_2._0_.Model.Orders
                 packaging: new Packaging("Коробка", "Картон", 30)
             );
 
-            DeliveryItem item1 = new DeliveryItem(aspirin, pricePerUnit: 50.00m, quantity: 10);
-
             Medicine ibuprofen = new Medicine(
                 name: "Ибупрофен",
                 category: "Обезболивающие",
@@ -66,27 +64,32 @@ namespace Pharmacy_Warehouse_2._0_.Model.Orders
                 packaging: new Packaging("Блистер", "Пластик", 20)
             );
 
+            DeliveryItem item1 = new DeliveryItem(aspirin, pricePerUnit: 50.00m, quantity: 10);
             DeliveryItem item2 = new DeliveryItem(ibuprofen, pricePerUnit: 30.00m, quantity: 15);
 
-            // Пример счетов
-            Invoice invoice1 = new Invoice(
-                id: "INV-001",
-                date: DateTime.Now,
-                customer: customer1,
-                sellerName: "Иванов Иван",
-                deliveryItem: item1
-            );
+            // Список фамилий для продавцов
+            List<string> sellerNames = new List<string> {
+    "Иванов", "Петров", "Сидоров", "Кузнецов", "Смирнов",
+    "Попов", "Васильев", "Михайлов", "Новиков", "Федоров"
+};
 
-            Invoice invoice2 = new Invoice(
-                id: "INV-002",
-                date: DateTime.Now.AddDays(-1),
-                customer: customer2,
-                sellerName: "Петров Петр",
-                deliveryItem: item2
-            );
+            // Генерация счетов
+            for (int i = 1; i <= 10; i++)
+            {
+                var customer = i % 2 == 0 ? customer1 : customer2;
+                var deliveryItem = i % 2 == 0 ? item1 : item2;
+                var sellerName = sellerNames[i - 1];
 
-            invoices.Add(invoice1);
-            invoices.Add(invoice2);
+                Invoice invoice = new Invoice(
+                    id: $"INV-{i:D3}",
+                    date: DateTime.Now.AddDays(-i),
+                    customer: customer,
+                    sellerName: sellerName,
+                    deliveryItem: deliveryItem
+                );
+
+                invoices.Add(invoice);
+            }
 
             SaveInvoiceList(invoices);
         }

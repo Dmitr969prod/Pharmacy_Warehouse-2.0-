@@ -10,13 +10,13 @@ namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
     public interface IInvoiceAddForm
     {
 
-        string Id { get; }
-        /*Customer Customer { get; }
-        Medicine Medicine { get; }*/
-        decimal PricePerUnit { get; }
-        int Quantity { get; }
-        string SellerName { get; }
-        DateTime date { get; }
-        Presenter.InvoicePresenter presenter { get; set; }
+        string Id { get; set; }
+        Customer Customer { get; set; }
+        Medicine Medicine { get; set; }
+        decimal PricePerUnit { get; set; }
+        int Quantity { get; set; }
+        string SellerName { get; set; }
+        DateTime date { get; set; }
+        Presenter.InvoicePresenter presenter { set; }
     }
 }
