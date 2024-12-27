@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
 {
-    public partial class InvoiceAdd : Form
+    public partial class InvoiceAdd : Form, IInvoiceAddForm
     {
         public InvoiceAdd()
         {
@@ -60,7 +60,40 @@ namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
             MedicinesComboBox.DisplayMember = "Name";
         }
 
-        
+        public string Id
+        {
+            get { return this.ID.Text; }
+        }
+
+        /*public Customer Customer
+        {
+            get { return (Customer)CustomersComboBox.SelectedItem;}
+        }
+
+        public Medicine Medicine
+        {
+            get {return (Medicine)MedicinesComboBox.SelectedItem;}
+        }*/
+
+        public decimal PricePerUnit
+        {
+            get { return decimal.Parse(this.PriceBox.Text); }
+        }
+
+        public int Quantity
+        {
+            get { return int.Parse(this.CountBox.Text);}
+        }
+        public string SellerName
+        {
+            get { return this.SellerNameBox.Text; }
+        }
+        public DateTime date
+        {
+            get { return DateTime.Parse(this.DateBox.Text);}
+        }
+
+        public Presenter.InvoicePresenter presenter { get; set; }
 
         private void MedicinesComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -75,6 +108,16 @@ namespace Pharmacy_Warehouse_2._0_.View.InvoiceView
         private void CustomersComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Customer SelectCustomer = (Customer)CustomersComboBox.SelectedItem;
+        }
+
+        private void ID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            presenter.AddInvoice();
         }
     }
 }

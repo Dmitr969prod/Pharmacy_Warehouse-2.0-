@@ -13,11 +13,14 @@ namespace Pharmacy_Warehouse_2._0_.Presenter
     {
         private readonly IInvoiceView _invoiceView;
         private readonly IInvoiceRepository _invoiceRepository;
+        private readonly IInvoiceAddForm _invoiceAdd;
 
-        public InvoicePresenter(IInvoiceView invoiceView, IInvoiceRepository invoiceRepository)
+        public InvoicePresenter(IInvoiceView invoiceView, IInvoiceRepository invoiceRepository, IInvoiceAddForm invoiceAdd)
         {
             _invoiceRepository = invoiceRepository;
             _invoiceView = invoiceView;
+            _invoiceAdd = invoiceAdd;
+            _invoiceAdd.presenter = this;
             _invoiceView.Presenter = this;
 
             _invoiceView.LoadMainForm += OnLoadMainForm;
@@ -95,15 +98,24 @@ namespace Pharmacy_Warehouse_2._0_.Presenter
 
         public void AddInvoice()
         {
+            var producer1 = new Manufacturer("Зеленый Лекарь", "Беларусь, Минск, ул. Советская, 5", "+375 17 1234567");
+
+
+            var packaging1 = new Packaging("Блистерная упаковка", "Пластик", 10);
             var newInvoice = new Invoice(
-                Guid.NewGuid().ToString(),
-                DateTime.Now,
-                new Customer("Новый клиент", "Адрес", "Телефон", "ИНН"),
-                "Новый продавец",
+                _invoiceAdd.Id,
+                _invoiceAdd.date,
+                new Customer(
+                name: "ООО Здоровье",
+                address: "г. Москва, ул. Лечебная, д. 1",
+                phone: "+7 495 123-45-67",
+                taxId: "7701234567"
+            ),
+                _invoiceAdd.SellerName,
                 new DeliveryItem(
-                    new Medicine("Новое лекарство", "Категория", DateTime.Now, DateTime.Now.AddYears(2), "РегНомер", null, null),
-                    0,
-                    0
+                    new Medicine("Парацетамол", "Обезболивающее", new DateTime(2023, 1, 15), new DateTime(2025, 1, 15), "1234567890", producer1, packaging1),
+                    _invoiceAdd.PricePerUnit,
+                    _invoiceAdd.Quantity
                 )
             );
 

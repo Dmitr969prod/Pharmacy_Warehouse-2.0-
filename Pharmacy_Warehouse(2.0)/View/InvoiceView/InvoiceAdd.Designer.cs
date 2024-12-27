@@ -34,18 +34,18 @@
             this.MedicinesComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.CustomersComboBox = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.PriceBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.CountBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.SellerNameBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.DateBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ComeBackButton
@@ -66,7 +66,7 @@
             this.AddButton.TabIndex = 81;
             this.AddButton.Text = "Создать";
             this.AddButton.UseVisualStyleBackColor = true;
-            
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // label2
             // 
@@ -76,7 +76,6 @@
             this.label2.Size = new System.Drawing.Size(169, 20);
             this.label2.TabIndex = 80;
             this.label2.Text = "Выберите лекарство";
-            
             // 
             // MedicinesComboBox
             // 
@@ -95,7 +94,6 @@
             this.label1.Size = new System.Drawing.Size(177, 20);
             this.label1.TabIndex = 78;
             this.label1.Text = "Выберите покупателя";
-            
             // 
             // CustomersComboBox
             // 
@@ -106,13 +104,14 @@
             this.CustomersComboBox.TabIndex = 77;
             this.CustomersComboBox.SelectedIndexChanged += new System.EventHandler(this.CustomersComboBox_SelectedIndexChanged);
             // 
-            // textBox1
+            // ID
             // 
-            this.textBox1.Location = new System.Drawing.Point(63, 92);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(273, 40);
-            this.textBox1.TabIndex = 83;
+            this.ID.Location = new System.Drawing.Point(63, 92);
+            this.ID.Multiline = true;
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(273, 40);
+            this.ID.TabIndex = 83;
+            this.ID.TextChanged += new System.EventHandler(this.ID_TextChanged);
             // 
             // label4
             // 
@@ -132,13 +131,13 @@
             this.label3.TabIndex = 87;
             this.label3.Text = "Цена за штуку";
             // 
-            // textBox2
+            // PriceBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(67, 292);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(273, 40);
-            this.textBox2.TabIndex = 86;
+            this.PriceBox.Location = new System.Drawing.Point(67, 292);
+            this.PriceBox.Multiline = true;
+            this.PriceBox.Name = "PriceBox";
+            this.PriceBox.Size = new System.Drawing.Size(273, 40);
+            this.PriceBox.TabIndex = 86;
             // 
             // label5
             // 
@@ -149,13 +148,13 @@
             this.label5.TabIndex = 89;
             this.label5.Text = "Количество";
             // 
-            // textBox3
+            // CountBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(67, 361);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(273, 40);
-            this.textBox3.TabIndex = 88;
+            this.CountBox.Location = new System.Drawing.Point(67, 361);
+            this.CountBox.Multiline = true;
+            this.CountBox.Name = "CountBox";
+            this.CountBox.Size = new System.Drawing.Size(273, 40);
+            this.CountBox.TabIndex = 88;
             // 
             // label6
             // 
@@ -166,13 +165,13 @@
             this.label6.TabIndex = 91;
             this.label6.Text = "Фамилия продавца";
             // 
-            // textBox4
+            // SellerNameBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(67, 431);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(273, 40);
-            this.textBox4.TabIndex = 90;
+            this.SellerNameBox.Location = new System.Drawing.Point(67, 431);
+            this.SellerNameBox.Multiline = true;
+            this.SellerNameBox.Name = "SellerNameBox";
+            this.SellerNameBox.Size = new System.Drawing.Size(273, 40);
+            this.SellerNameBox.TabIndex = 90;
             // 
             // label7
             // 
@@ -200,13 +199,13 @@
             this.label8.TabIndex = 95;
             this.label8.Text = "Дата выписки(ГГ.ММ.ДД)";
             // 
-            // textBox6
+            // DateBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(67, 574);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(273, 40);
-            this.textBox6.TabIndex = 94;
+            this.DateBox.Location = new System.Drawing.Point(67, 574);
+            this.DateBox.Multiline = true;
+            this.DateBox.Name = "DateBox";
+            this.DateBox.Size = new System.Drawing.Size(273, 40);
+            this.DateBox.TabIndex = 94;
             // 
             // InvoiceAdd
             // 
@@ -214,17 +213,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(397, 695);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.DateBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.SellerNameBox);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.CountBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.PriceBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ID);
             this.Controls.Add(this.ComeBackButton);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.label2);
@@ -246,17 +245,17 @@
         private System.Windows.Forms.ComboBox MedicinesComboBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox CustomersComboBox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox PriceBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox CountBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox SellerNameBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox DateBox;
     }
 }

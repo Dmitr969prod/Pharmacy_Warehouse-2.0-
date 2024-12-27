@@ -99,6 +99,7 @@
       <DependentUpon>DeliveryNoteView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\DelieveryNotesView\IDeliveryNoteView.cs" />
+    <Compile Include="View\InvoiceView\IInvoiceAddForm.cs" />
     <Compile Include="View\InvoiceView\IInvoiceView.cs" />
     <Compile Include="View\InvoiceView\InvoiceAdd.cs">
       <SubType>Form</SubType>
