@@ -26,13 +26,5 @@ namespace Pharmacy_Warehouse
             Item = item;
         }
 
-        public decimal TotalCost
-        {
-            get
-            {
-                return Item.TotalPrice;
-            }
-        }
     }
-
 }

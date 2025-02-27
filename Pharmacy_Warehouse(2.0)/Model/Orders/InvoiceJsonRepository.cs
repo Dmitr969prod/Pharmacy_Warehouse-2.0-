@@ -25,7 +25,6 @@ namespace Pharmacy_Warehouse_2._0_.Model.Orders
         {
             List<Invoice> invoices = new List<Invoice>();
 
-            // Пример клиентов
             Customer customer1 = new Customer(
                 name: "ООО Здоровье",
                 address: "г. Москва, ул. Лечебная, д. 1",
@@ -40,7 +39,6 @@ namespace Pharmacy_Warehouse_2._0_.Model.Orders
                 taxId: "7807654321"
             );
 
-            // Пример товаров
             Medicine aspirin = new Medicine(
                 name: "Аспирин",
                 category: "Противовоспалительные",
@@ -64,13 +62,11 @@ namespace Pharmacy_Warehouse_2._0_.Model.Orders
             DeliveryItem item1 = new DeliveryItem(aspirin, pricePerUnit: 50.00m, quantity: 10);
             DeliveryItem item2 = new DeliveryItem(ibuprofen, pricePerUnit: 30.00m, quantity: 15);
 
-            // Список фамилий для продавцов
             List<string> sellerNames = new List<string> {
     "Иванов", "Петров", "Сидоров", "Кузнецов", "Смирнов",
     "Попов", "Васильев", "Михайлов", "Новиков", "Федоров"
 };
 
-            // Генерация счетов
             for (int i = 1; i <= 10; i++)
             {
                 var customer = i % 2 == 0 ? customer1 : customer2;

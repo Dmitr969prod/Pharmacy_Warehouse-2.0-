@@ -77,6 +77,7 @@
             this.IdBox.Name = "IdBox";
             this.IdBox.Size = new System.Drawing.Size(273, 38);
             this.IdBox.TabIndex = 70;
+            this.IdBox.TextChanged += new System.EventHandler(this.IdBox_TextChanged);
             // 
             // label2
             // 

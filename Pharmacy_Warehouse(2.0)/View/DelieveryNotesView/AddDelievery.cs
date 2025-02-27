@@ -156,5 +156,10 @@ namespace Pharmacy_Warehouse_2._0_.View.DelieveryNotesView
         }
 
         public Presenter.DeliveryNotePresenter presenter { private get; set; }
+
+        private void IdBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

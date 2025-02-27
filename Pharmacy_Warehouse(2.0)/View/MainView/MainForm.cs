@@ -33,5 +33,10 @@ namespace Pharmacy_Warehouse_2._0_
         {
             LoadInvoiceForm?.Invoke(this, EventArgs.Empty);
         }
+
+        private void Heading_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -92,6 +92,7 @@
             this.Heading.TabIndex = 7;
             this.Heading.Text = "Аптечный склад";
             this.Heading.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Heading.Click += new System.EventHandler(this.Heading_Click);
             // 
             // MainForm
             // 

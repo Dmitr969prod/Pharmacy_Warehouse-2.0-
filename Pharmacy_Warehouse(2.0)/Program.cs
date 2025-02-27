@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Pharmacy_Warehouse.Model.Suppliers;
+﻿using Pharmacy_Warehouse.Model.Suppliers;
 using Pharmacy_Warehouse_2._0_.Model.Delivery;
 using Pharmacy_Warehouse_2._0_.Model.Medicines;
 using Pharmacy_Warehouse_2._0_.Model.Orders;
@@ -13,6 +7,8 @@ using Pharmacy_Warehouse_2._0_.View.DelieveryNoteView;
 using Pharmacy_Warehouse_2._0_.View.InvoiceView;
 using Pharmacy_Warehouse_2._0_.View.MedicinesView;
 using Pharmacy_Warehouse_2._0_.View.Suppliers;
+using System;
+using System.Windows.Forms;
 using WarehouseClient.Presenter;
 
 namespace Pharmacy_Warehouse_2._0_
